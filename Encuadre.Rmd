@@ -1,0 +1,93 @@
+---
+title: "Análisis y Modelado Espacial"
+subtitle: "Encuadre"
+author: "Gerardo Martín"
+fontsize: 11pt
+output:
+  beamer_presentation:
+    theme: metropolis
+    highlight: pygments
+    slide_level: 3
+    fig_height: 6
+    fig_caption: true
+    latex_engine: xelatex
+    keep_tex: true
+date: '2022-06-29'
+---
+
+### Sobre mí
+
+- Gerardo Martín
+
+- Veterinario
+
+- MSc Biología de Conservación
+
+    - Modelación matemática de transmisión de enfermedades entre animales silvestres y domésticos
+
+- Doctorado en Salud Pública
+
+    - Modelación del riesgo de enfermedades emergentes de murciélagos
+    
+### Contacto
+
+- [gerardo.mmc@enesmerida.unam.mx](mailto:gerardo.mmc@enesmerida.unam.mx)
+- [gerardommc.github.io](https://gerardommc.github.io)
+- [ResearchGate](https://www.researchgate.net/profile/Gerardo-Martin)
+
+### Sobre usted_s
+
+- ¿Cómo se llaman?
+- ¿De dónde vienen?
+- ¿Qué les interesa?
+- ¿En qué se imaginan trabajando?
+- ¿Qué esperan del curso?
+
+### Sobre el curso
+
+- Conceptos básicos y definiciones
+- Plantear preguntas y planear experimentos
+- Describir datos
+- Aprender sobre el ambiente con datos y análisis
+    
+### Contenidos del curso
+
+1. Introducción
+2. Análisis de asociación espacial
+3. Modelación de áreas de distribución y nichos ecológicos
+4. Discusión y conclusiones
+
+
+### Lo feo ... las evaluaciones
+
+- Evaluación diangóstica
+- Evaluación formativa
+
+    - Trabajos y retroalimentación
+- Exámenes
+- Asistencia
+- Participación
+
+### Las evaluaciones
+
+- Trabajos 50%
+- Examenes 25%
+- Asistencia 25%
+- Participación $\rightarrow$ extra
+
+### Estrategias pedagógicas
+
+- Google Classroom: ifpezz3
+- Presentaciones
+- Prácticas en clase
+
+    - Calculadora
+    - Geogebra
+    - Excel
+    - R (introducción)
+
+- Prácticas de tarea
+
+    - Entregadas en GC
+
+# Preguntas?

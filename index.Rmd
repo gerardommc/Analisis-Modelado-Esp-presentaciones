@@ -12,9 +12,11 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-[Encuadre](Encuadre.pdf) y [Programa del curso](Programa.pdf)
+- [Encuadre](Encuadre.pdf)
+- [Programa del curso](Programa.pdf)
+- [Calendario de participación](Calendario-participacion.pdf)
     
-1. Introducción al Modelado Espacial
+1. [Introducción al Modelado Espacial](Introduccion.pdf)
 
     - [Análisis utilizando sistemas de información geográfica](Unidad-1/Analisis-SIG.pdf)
     
