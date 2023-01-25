@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - [Programa del curso](Programa.pdf)
 - [Calendario de participación](Calendario-participacion.pdf)
     
-1. [Introducción al Modelado Espacial](Introduccion.pdf)
+1. [Introducción al Modelado Espacial](Unidad-1/Introduccion.pdf)
 
     - [Análisis utilizando sistemas de información geográfica](Unidad-1/Analisis-SIG.pdf)
     
