@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = TRUE)
     
     - [Modelado espacial](Unidad-1/Modelado-espacial.pdf)
           
-2. Análisis de la asociación espacial entre varios fenómenos
+2. [Análisis de la asociación espacial entre varios fenómenos](Unidad-2/Intro-asociacion.pdf)
 
     - [Correlación espacial](Unidad-2/Correlacion.pdf)
     

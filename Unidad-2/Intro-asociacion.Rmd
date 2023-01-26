@@ -1,0 +1,94 @@
+---
+title: "Análisis de la asociación espacial"
+subtitle: "Introducción"
+author: "Gerardo Martín"
+fontsize: 11pt
+output:
+  beamer_presentation:
+    theme: metropolis
+    highlight: pygments
+    slide_level: 3
+    fig_height: 4.5
+    fig_caption: true
+    latex_engine: xelatex
+    keep_tex: true
+date: '2022-06-29'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(dev = 'pdf')
+```
+
+## ¿Qué es la asociación?
+
+- Dos variables que se *parecen*
+
+```{r echo = F}
+df <- data.frame(x = c(1.1, 2.2, 3.3, 4.4, 5.5), y= c(3, 4, 5, 6, 7))
+knitr::kable(df)
+```
+
+## ¿Qué es la asociación?
+
+```{r echo=F, fig.height=4, fig.width=4}
+with(df, plot(x, y, col = "red"))
+```
+
+## ¿Qué es la asociación?
+
+- Variables se parecen, no porque sus valores sean iguales
+
+- Aumento de valores de una corresponden con aumento o disminución de la otra
+
+- Estadísticamente, indica que la varianza de una es explicada por otra
+
+- No implica causa-efecto
+
+## Asociación entre variables espaciales
+
+```{r echo=F, fig.height=4, fig.width=8, message=FALSE, warning=FALSE}
+library(raster)
+r <- stack(list.files("../Datos-ejemplos/", pattern = "tif", full.names = T)[1:2])
+plot(r)
+```
+
+## Asociación entre variables espaciales
+
+- Inspección visual puede ser insuficiente
+
+- Asociación, sólo en ciertas regiones
+
+- Es posible ver los valores en gráfico de dispersión
+
+## Gráfico de dispersión de las variables raster
+
+```{r echo=F, fig.height=4, fig.width=4}
+plot(r[[1]][], r[[2]][], xlab = "x", ylab = "y", col = "red")
+```
+
+## Asociación entre variables espaciales
+
+```{r echo=F, fig.height=4, fig.width=8}
+r2 <- stack(list.files("../Datos-ejemplos/", "tif", full.names = T)[2:3])
+plot(r2)
+```
+
+## Gráfico de dispersión
+
+```{r echo=F, fig.height=4, fig.width=4}
+plot(r2[[1]][], r2[[2]][], xlab = "x", ylab = "y", col = "red")
+```
+
+## Análisis de asociación formal
+
+- Análisis gráfico, últil, insuficiente
+
+- No es objetivo
+
+- Necesario *medir* la asociación
+
+- Pruebas estadísticas:
+
+    - Correlación
+    
+    - Regresión

@@ -1,0 +1,21 @@
+---
+title: "Análisis de la asociación espacial"
+subtitle: "Correlación"
+author: "Gerardo Martín"
+fontsize: 11pt
+output:
+  beamer_presentation:
+    theme: metropolis
+    highlight: pygments
+    slide_level: 3
+    fig_height: 6
+    fig_caption: true
+    latex_engine: xelatex
+    keep_tex: true
+date: '2022-06-29'
+---
+
+## Intro
+
+Aquí la intro
+
