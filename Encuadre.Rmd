@@ -45,10 +45,10 @@ date: '2022-06-29'
 
 ### Sobre el curso
 
-- Conceptos básicos y definiciones
-- Plantear preguntas y planear experimentos
-- Describir datos
-- Aprender sobre el ambiente con datos y análisis
+- Introducción al modelado espacial
+- Análisis de la asociación espacial entre fenómenos
+- Modelado de áreas de distribución y nichos ecológicos
+- Discusión y conclusiones
     
 ### Contenidos del curso
 
@@ -57,6 +57,19 @@ date: '2022-06-29'
 3. Modelación de áreas de distribución y nichos ecológicos
 4. Discusión y conclusiones
 
+### Seminario
+
+- Modelación de nichos y áreas de distribución:
+
+**Efectos del cambio ambiental en la distribución de animales de importancia médica y los accidentes provocados por estos en México**
+
+### Profesorxs participantes
+
+- Dra. Iris Neri Flores $\rightarrow$ Aplicaciones de modelos digitales de elevación
+
+- Dr. Gustavo Martín
+
+    - Análisis multicriterio, Calidad de datos, Cambio de uso y cobertura
 
 ### Lo feo ... las evaluaciones
 
