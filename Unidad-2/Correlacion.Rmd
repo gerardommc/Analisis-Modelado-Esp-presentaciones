@@ -168,3 +168,37 @@ Tenemos:
 \begin{equation*}
  \frac{\mathrm{cov}(X, Y)}{\sigma_x \sigma_y} = \frac{0.166}{2.17} = 0.091
 \end{equation*}
+
+*El resultado no es preciso por varias operaciones que obviaron decimales*
+
+### Prueba de correlación en **R**
+
+- Función para hacer prueba `cor.test`
+
+- Uso:
+
+```{r eval = F, echo = T}
+cor.test(x, y)
+```
+
+- `x` y `y` son las variables $X$ y $X$
+
+    - **Deben existir en el espacio de trabajo de R**
+
+### Resultado de la prueba de correlación en **R**
+
+```{r echo = T}
+cor.test(x, y)
+```
+
+### Interpretación
+
+- `t = 0.76948`, valor del estadístico T-Student
+
+- `df = 98`, grados de libertad
+
+- `p-value = 0.4435`, probabilidad de que $r = 0$
+
+    - Probabilidad de que la correlación no exista
+    
+- `cor 0.0774955 `, valor del coeficiente de correlación estimado
