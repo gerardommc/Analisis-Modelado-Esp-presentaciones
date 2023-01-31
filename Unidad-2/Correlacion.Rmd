@@ -15,7 +15,156 @@ output:
 date: '2022-06-29'
 ---
 
-## Intro
+### Intro
 
-Aquí la intro
+Asociación estadística:
 
+*Probar la hipótesis de que dos variables se predicen mutuamente*
+
+Asociación espacial:
+
+*Variables con estructura espacial que se predicen mutuamente*
+
+### Representación gráfica
+
+```{r echo=F, fig.height=4, fig.width=4, fig.cap="Gráfico de dispersión de dos variables que se predicen mutuamente.", fig.align='center'}
+set.seed(878)
+x <- rnorm(100, mean = 10, sd = 2)
+y <- x + rnorm(100, mean = -5, sd = 0.2)
+plot(x, y, col = "red")
+```
+
+### Representación gráfica 
+
+```{r echo=F, fig.height=4, fig.width=4, fig.cap="Gráfico de dispersión de dos variables que no se predicen mutuamente.", fig.align='center'}
+y <- rnorm(100, mean = 10, sd = 1)
+plot(x, y, col = "red")
+```
+
+### Medición de la asociación
+
+- Prueba estadística por defecto: [Coeficiente de correlación de Pearson](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient)
+
+- Estima cociente de covarianza y producto de desviación estándar:
+
+\begin{equation}
+r_{X, Y} = \frac{\mathrm{cov}(X, Y)}{\sigma_{x} \sigma_{y}}
+\end{equation}
+
+\begin{equation}
+\mathrm{cov}(X, Y) = \mathbb{E}[(X - \mu_x) (Y - \mu_y)]
+\end{equation}
+
+# Coeficiente de correlación paso a paso
+
+### El caso no espacial
+
+Comenzamos con dos variables $X$ y $Y$:
+
+```{r echo = F}
+df <- data.frame(x = x, y = y)
+knitr::kable(head(df), caption = "Primeras seis filas de tabla que contiene *X* y *Y*.")
+```
+
+### Covarianza entre $X$ y $Y$
+
+\begin{equation}
+\mathrm{cov}(X, Y) = \mathbb{E}[(X - \mu_x) (Y - \mu_y)]
+\end{equation}
+
+De adentro de paréntesis:
+- $\mu_x =$ Promedio de $X$; $\mu_y =$ Promedio de $Y$
+
+- $\mu_x = 10.23; \mu_y = 10.22$
+
+- Restamos $\mu$ de todos los valores de $X$ y $Y$
+
+- $X^*=X - \mu_x; Y^*=Y - \mu_y$
+
+### Covarianza entre $X$ y $Y$
+
+```{r echo=F, fig.height=4, fig.width=8}
+par(mfrow = c(1, 2))
+hist(x, main = "Histograma de X", xlab = "X", ylab = "Frecuencia")
+hist(x-mean(x), xlab = expression(X^"*"), main = "Histograma de X*", ylab = "Frecuencia")
+```
+
+### Covarianza entre $X$ y $Y$
+
+Entonces las variables centradas quedan así:
+
+```{r echo = F}
+df.1 <- df
+df.1$x <- df$x - mean(df$x)
+df.1$y <- df$y - mean(df$y)
+knitr::kable(df.1, caption = "Variables *X* y *Y* centradas (con media de 0).")
+```
+
+
+### Covarianza entre $X$ y $Y$
+
+- Multiplicamos cada valor $X^*_i$ por su correspondiente $Y^*_i$
+
+\begin{align*}
+X^*_1 \times Y^*_1 =  & -3.668 \times -1.847 = & 6.776 \\
+X^*_2 \times Y^*_2 =  & -0.85 \times -0.65 = & -0.553 \\
+X^*_3 \times Y^*_3 =  & -0.211 \times -1.322 = & 0.279 \\
+\vdots
+\end{align*}
+
+- Terminamos haciendo: $\frac{1}{n}\sum X^*_i Y^*_i$, es decir el promedio de los productos
+
+### Producto de las desviaciones estándar
+
+El denominador de la fórmula para la correlación es:
+
+\begin{equation*}
+\sigma_x \sigma_y
+\end{equation*}
+
+donde $\sigma$ indica la desviación estándar de la variable en el subíndice. Recordemos:
+
+\begin{equation}
+\sigma_x = \sqrt{\sum \frac{(X_i - \mu_x)^2}{n-1}}
+\end{equation}
+
+### Producto de las desviaciones estándar
+
+Dado que ya contamos con $X_i - \mu_x$ y $Y_i - \mu_x$, sólo tenemos que hacer ${X^*}^2$:
+
+\begin{align*}
+{X^*_1}^2 & = 6.776^2 = & 45.92 \\
+{X^*_2}^2 & = -0.553^2 = & 0.305 \\
+{X^*_3}^2 & = 0.279^2 = & 0.077 \\
+\vdots
+\end{align*}
+
+### Producto de las desviaciones estándar
+
+Una vez, obtenidos ${X^*}^2$ y ${Y^*}^2$, las sumamos y dividimos entre $n-1 = 99$:
+
+\begin{align*}
+\sum {X^*_i}^2/99 & = 391.1758/99 = 3.951\\
+\sum {Y^*_i}^2/99 & = 119.9985/99 = 1.191
+\end{align*}
+
+Y terminamos sacando las raíces cuadradas:
+
+\begin{align*}
+\sqrt{9.951} & = 1.987\\
+\sqrt{1.191} & = 1.091
+1.987 \times 1.091 & = 2.17
+\end{align*}
+
+### Cálculo final de $r$
+
+Una vez obtenidos:
+
+- $\mathrm{cov}(X, Y) = 0.166$
+- $\sigma_x \sigma_y = 2.17$
+
+Tenemos:
+
+\begin{equation*}
+ \frac{\mathrm{cov}(X, Y)}{\sigma_x \sigma_y} = \frac{0.166}{2.17} = 0.091
+\end{equation*}

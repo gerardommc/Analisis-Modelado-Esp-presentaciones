@@ -75,6 +75,26 @@
 \makeatother
 \usepackage{xcolor}
 \newif\ifbibliography
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+\usepackage{caption}
+% Make caption package work with longtable
+\makeatletter
+\def\fnum@table{\tablename~\thetable}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -99,11 +119,321 @@
 \begin{document}
 \frame{\titlepage}
 
-\hypertarget{intro}{%
-\subsection{Intro}\label{intro}}
-
 \begin{frame}{Intro}
-Aquí la intro
+\protect\hypertarget{intro}{}
+Asociación estadística:
+
+\emph{Probar la hipótesis de que dos variables se predicen mutuamente}
+
+Asociación espacial:
+
+\emph{Variables con estructura espacial que se predicen mutuamente}
+\end{frame}
+
+\begin{frame}{Representación gráfica}
+\protect\hypertarget{representaciuxf3n-gruxe1fica}{}
+\begin{figure}
+
+{\centering \includegraphics{Correlacion_files/figure-beamer/unnamed-chunk-1-1} 
+
+}
+
+\caption{Gráfico de dispersión de dos variables que se predicen mutuamente.}\label{fig:unnamed-chunk-1}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Representación gráfica}
+\protect\hypertarget{representaciuxf3n-gruxe1fica-1}{}
+\begin{figure}
+
+{\centering \includegraphics{Correlacion_files/figure-beamer/unnamed-chunk-2-1} 
+
+}
+
+\caption{Gráfico de dispersión de dos variables que no se predicen mutuamente.}\label{fig:unnamed-chunk-2}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Medición de la asociación}
+\protect\hypertarget{mediciuxf3n-de-la-asociaciuxf3n}{}
+\begin{itemize}
+\item
+  Prueba estadística por defecto:
+  \href{https://en.wikipedia.org/wiki/Pearson_correlation_coefficient}{Coeficiente
+  de correlación de Pearson}
+\item
+  Estima cociente de covarianza y producto de desviación estándar:
+\end{itemize}
+
+\begin{equation}
+r_{X, Y} = \frac{\mathrm{cov}(X, Y)}{\sigma_{x} \sigma_{y}}
+\end{equation}
+
+\begin{equation}
+\mathrm{cov}(X, Y) = \mathbb{E}[(X - \mu_x) (Y - \mu_y)]
+\end{equation}
+\end{frame}
+
+\hypertarget{coeficiente-de-correlaciuxf3n-paso-a-paso}{%
+\section{Coeficiente de correlación paso a
+paso}\label{coeficiente-de-correlaciuxf3n-paso-a-paso}}
+
+\begin{frame}{El caso no espacial}
+\protect\hypertarget{el-caso-no-espacial}{}
+Comenzamos con dos variables \(X\) y \(Y\):
+
+\begin{longtable}[]{@{}rr@{}}
+\caption{Primeras seis filas de tabla que contiene \emph{X} y
+\emph{Y}.}\tabularnewline
+\toprule()
+x & y \\
+\midrule()
+\endfirsthead
+\toprule()
+x & y \\
+\midrule()
+\endhead
+6.567783 & 8.377792 \\
+9.385544 & 10.875437 \\
+10.025123 & 8.902984 \\
+9.477216 & 11.394629 \\
+10.691021 & 11.163742 \\
+11.768682 & 7.508639 \\
+\bottomrule()
+\end{longtable}
+\end{frame}
+
+\begin{frame}{Covarianza entre \(X\) y \(Y\)}
+\protect\hypertarget{covarianza-entre-x-y-y}{}
+\begin{equation}
+\mathrm{cov}(X, Y) = \mathbb{E}[(X - \mu_x) (Y - \mu_y)]
+\end{equation}
+
+De adentro de paréntesis: - \(\mu_x =\) Promedio de \(X\); \(\mu_y =\)
+Promedio de \(Y\)
+
+\begin{itemize}
+\item
+  \(\mu_x = 10.23; \mu_y = 10.22\)
+\item
+  Restamos \(\mu\) de todos los valores de \(X\) y \(Y\)
+\item
+  \(X^*=X - \mu_x; Y^*=Y - \mu_y\)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Covarianza entre \(X\) y \(Y\)}
+\protect\hypertarget{covarianza-entre-x-y-y-1}{}
+\includegraphics{Correlacion_files/figure-beamer/unnamed-chunk-4-1.pdf}
+\end{frame}
+
+\begin{frame}{Covarianza entre \(X\) y \(Y\)}
+\protect\hypertarget{covarianza-entre-x-y-y-2}{}
+Entonces las variables centradas quedan así:
+
+\begin{longtable}[]{@{}rr@{}}
+\caption{Variables \emph{X} y \emph{Y} centradas (con media de
+0).}\tabularnewline
+\toprule()
+x & y \\
+\midrule()
+\endfirsthead
+\toprule()
+x & y \\
+\midrule()
+\endhead
+-3.6683642 & -1.8473745 \\
+-0.8506034 & 0.6502711 \\
+-0.2110244 & -1.3221819 \\
+-0.7589320 & 1.1694628 \\
+0.4548737 & 0.9385757 \\
+1.5325346 & -2.7165272 \\
+1.3698804 & 0.8929517 \\
+0.6172374 & -0.5199712 \\
+0.3935418 & 0.3560402 \\
+3.3667466 & 0.5284583 \\
+-2.0316619 & -1.9923603 \\
+1.9237519 & -0.0098941 \\
+-2.3516555 & 1.8321201 \\
+-0.8807693 & 0.1110266 \\
+1.0147630 & -0.4014927 \\
+0.2993192 & 0.0519248 \\
+1.7928999 & 1.5187938 \\
+4.6298817 & -0.0784656 \\
+2.1233693 & -0.4651647 \\
+-1.0116370 & 0.3828437 \\
+-1.3207977 & 0.6917354 \\
+0.2455960 & -1.2144802 \\
+-0.5152134 & 0.1388762 \\
+-0.0648462 & 1.4931035 \\
+0.7802985 & -1.4979634 \\
+-0.4417742 & 0.1289438 \\
+-4.2370381 & 0.8402827 \\
+-1.1036745 & -1.7050901 \\
+0.9534060 & -1.0697853 \\
+0.4322926 & 0.3275924 \\
+-0.7499889 & 0.6388993 \\
+2.0348312 & -0.3434527 \\
+-3.6900877 & -0.2643630 \\
+4.3509286 & 0.2153030 \\
+-3.9429973 & -1.1302360 \\
+3.3598029 & 0.4963808 \\
+1.2158235 & -0.7320487 \\
+2.3463793 & 1.2666782 \\
+0.2703344 & 0.5806712 \\
+-2.4729026 & -1.2881950 \\
+-0.2755914 & -0.6785967 \\
+0.7894347 & 2.3537191 \\
+0.8961379 & -1.0676873 \\
+-0.2979764 & -1.7777935 \\
+0.7738114 & 0.4142153 \\
+-0.2519097 & -1.1120525 \\
+-1.2243022 & -1.3754722 \\
+-1.3718814 & -1.3488892 \\
+-1.4811398 & -0.4138059 \\
+5.9245731 & 0.4164914 \\
+-0.6548980 & 1.4010518 \\
+1.0112850 & 0.6830708 \\
+0.8607943 & 1.2845471 \\
+3.2675786 & 1.0260894 \\
+-1.7604377 & 0.0342860 \\
+1.1065531 & 1.9185577 \\
+-2.6873578 & -0.2013125 \\
+1.2767805 & -1.2768426 \\
+-4.8274402 & -0.5220697 \\
+-0.0761922 & -1.6222227 \\
+3.0914669 & 0.9457651 \\
+-0.8674075 & 1.3371622 \\
+1.6947786 & -1.0374683 \\
+-1.9846333 & -0.6472667 \\
+1.2123847 & 0.7116630 \\
+-2.7088601 & -1.6353260 \\
+3.0620984 & -1.3206603 \\
+-2.6130187 & 1.0586752 \\
+-0.0994008 & -0.2311556 \\
+0.6840382 & 1.2365352 \\
+0.2034930 & -1.3437097 \\
+-0.8565411 & 0.4986727 \\
+-2.3021886 & 1.9659973 \\
+-1.1029436 & 1.0959698 \\
+-1.5797378 & 0.9756138 \\
+1.2276369 & 0.5691483 \\
+-0.4365610 & -1.3762386 \\
+-0.5203985 & -1.3579626 \\
+0.5347115 & 0.2322999 \\
+-1.3441858 & 0.4744989 \\
+3.4481012 & -0.9579504 \\
+0.7868235 & -0.6303939 \\
+3.0280214 & 0.6202408 \\
+-2.4495317 & -0.6904256 \\
+2.0825198 & -0.4559109 \\
+-0.7907856 & 0.7993198 \\
+-0.7650083 & -0.7167907 \\
+2.0248546 & 1.5804568 \\
+-2.6995347 & 0.5995640 \\
+-0.0382326 & -0.2134482 \\
+-1.2655130 & 1.1954145 \\
+-2.4661816 & 1.5325769 \\
+-0.8254355 & 0.9276004 \\
+-2.6851323 & 0.0875898 \\
+-1.0749056 & 0.8059647 \\
+1.6726473 & -0.2114341 \\
+0.7397269 & 2.0228709 \\
+-0.1952684 & -1.0272879 \\
+0.6052343 & -1.7224142 \\
+-0.6294768 & -0.4849285 \\
+\bottomrule()
+\end{longtable}
+\end{frame}
+
+\begin{frame}{Covarianza entre \(X\) y \(Y\)}
+\protect\hypertarget{covarianza-entre-x-y-y-3}{}
+\begin{itemize}
+\tightlist
+\item
+  Multiplicamos cada valor \(X^*_i\) por su correspondiente \(Y^*_i\)
+\end{itemize}
+
+\begin{align*}
+X^*_1 \times Y^*_1 =  & -3.668 \times -1.847 = & 6.776 \\
+X^*_2 \times Y^*_2 =  & -0.85 \times -0.65 = & -0.553 \\
+X^*_3 \times Y^*_3 =  & -0.211 \times -1.322 = & 0.279 \\
+\vdots
+\end{align*}
+
+\begin{itemize}
+\tightlist
+\item
+  Terminamos haciendo: \(\frac{1}{n}\sum X^*_i Y^*_i\), es decir el
+  promedio de los productos
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Producto de las desviaciones estándar}
+\protect\hypertarget{producto-de-las-desviaciones-estuxe1ndar}{}
+El denominador de la fórmula para la correlación es:
+
+\begin{equation*}
+\sigma_x \sigma_y
+\end{equation*}
+
+donde \(\sigma\) indica la desviación estándar de la variable en el
+subíndice. Recordemos:
+
+\begin{equation}
+\sigma_x = \sqrt{\sum \frac{(X_i - \mu_x)^2}{n-1}}
+\end{equation}
+\end{frame}
+
+\begin{frame}{Producto de las desviaciones estándar}
+\protect\hypertarget{producto-de-las-desviaciones-estuxe1ndar-1}{}
+Dado que ya contamos con \(X_i - \mu_x\) y \(Y_i - \mu_x\), sólo tenemos
+que hacer \({X^*}^2\):
+
+\begin{align*}
+{X^*_1}^2 & = 6.776^2 = & 45.92 \\
+{X^*_2}^2 & = -0.553^2 = & 0.305 \\
+{X^*_3}^2 & = 0.279^2 = & 0.077 \\
+\vdots
+\end{align*}
+\end{frame}
+
+\begin{frame}{Producto de las desviaciones estándar}
+\protect\hypertarget{producto-de-las-desviaciones-estuxe1ndar-2}{}
+Una vez, obtenidos \({X^*}^2\) y \({Y^*}^2\), las sumamos y dividimos
+entre \(n-1 = 99\):
+
+\begin{align*}
+\sum {X^*_i}^2/99 & = 391.1758/99 = 3.951\\
+\sum {Y^*_i}^2/99 & = 119.9985/99 = 1.191
+\end{align*}
+
+Y terminamos sacando las raíces cuadradas:
+
+\begin{align*}
+\sqrt{9.951} & = 1.987\\
+\sqrt{1.191} & = 1.091
+1.987 \times 1.091 & = 2.17
+\end{align*}
+\end{frame}
+
+\begin{frame}{Cálculo final de \(r\)}
+\protect\hypertarget{cuxe1lculo-final-de-r}{}
+Una vez obtenidos:
+
+\begin{itemize}
+\tightlist
+\item
+  \(\mathrm{cov}(X, Y) = 0.166\)
+\item
+  \(\sigma_x \sigma_y = 2.17\)
+\end{itemize}
+
+Tenemos:
+
+\begin{equation*}
+ \frac{\mathrm{cov}(X, Y)}{\sigma_x \sigma_y} = \frac{0.166}{2.17} = 0.091
+\end{equation*}
 \end{frame}
 
 \end{document}
