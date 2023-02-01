@@ -1,0 +1,198 @@
+---
+title: "Análisis de l asociación espacia"
+subtitle: "Correlación entre variables espaciales"
+author: "Gerardo Martín"
+fontsize: 11pt
+output:
+  beamer_presentation:
+    theme: metropolis
+    highlight: pygments
+    slide_level: 3
+    fig_height: 4.5
+    fig_caption: true
+    latex_engine: xelatex
+    keep_tex: true
+date: '2022-06-29'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(dev = 'pdf')
+```
+
+### Las variables espaciales
+
+Además de valores de varibles, tenemos ubicación, p. ej.
+
+```{r echo = F, warning=F, message=F}
+library(raster)
+r <- stack(list.files("../Datos-ejemplos/", "tif", full.names = T))
+r.df <- data.frame(rasterToPoints(r))
+knitr::kable(head(r.df), caption = "Primeras seis filas de una conjunto de variables raster tabuladas. Las coordenadas corresponden al centro de cada píxel.")
+```
+
+
+### Las variables espaciales
+
+```{r echo=F, fig.align='center', fig.height=4, fig.width=5, fig.cap="Gráfico de la variable 1."}
+plot(r[[1]])
+```
+
+### Las variables espaciales
+
+```{r echo=F, fig.align='center', fig.height=3.5, fig.width=5}
+plot(r)
+```
+
+### Correlación entre variables espaciales
+
+Comparando las paletas de color, no nos es del todo posible detectar correlaciones.
+
+Necesitamos:
+
+1. Gráfico de dispersión
+
+2. Coeficiente de correlación
+
+### Correlación entre variables espaciales
+
+Paquete `raster` contiene métodos para hacer el cálculo entre pares de capas
+
+Función `pairs` hace todo en automático, uso
+
+```{r echo = T, eval = F}
+pairs(raster)
+```
+
+### Uso de `pairs`
+
+- Único argumento necesario, nombre de objeto tipo `raster`,  `stack` ó `brick`
+
+- En ejemplo anterior, el nombre del objeto es `raster`, necesitamos otro nombre
+
+```{r echo = T, eval=F}
+# para una sola capa
+r <- raster("../Datos-ejemplos/Var-1.tif") 
+#Para varias capas alineadas
+r <- stack(list.files("../Datos-ejemplos/", 
+                      "tif", full.names = T))
+```
+
+### Uso de pairs
+
+```{r echo=T, fig.align='center', fig.height=3.5, fig.width=3.5, warning=FALSE}
+pairs(r)
+```
+
+### Interpretación de gráfico de pares
+
+- Diagonal principal $\rightarrow$ Histograma de variable individual
+
+- Triángulo inferior $\rightarrow$ Gráfico de dispersión
+
+- Triángulo superior $\rightarrow$ Coeficiente de correlación estimado (ver cálculo [aquí](Correlacion.pdf))
+
+### Correlación entre puntos y raster
+
+- Cuando tenemos mediciones colectadas, podríamos tener sólo coordenadas de los puntos de muestreo
+
+```{r echo = F}
+set.seed(19873)
+puntos <- coordinates(r)
+puntos <- puntos[sample(1:nrow(puntos), 100),]
+puntos <- data.frame(puntos)
+puntos$x <- puntos$x + runif(100, -0.1, 0.1)
+puntos$y <- puntos$y + runif(100, -0.1, 0.1)
+var <- extract(r[[2]], puntos)
+puntos$mediciones <- var * rnorm(1, 2, 0.1) + rnorm(100, -150, 20)
+puntos <- na.omit(puntos)
+knitr::kable(head(puntos), caption = "Primeras seis filas de una base de datos de mediciones colectadas en campo.")
+```
+
+### Correlación entre puntos y raster
+
+Necesitamos medir con qué proceso ambiental (representado con una capa raster) nuestros datos están asociados
+
+- Tenemos 3 capas:
+
+    - Var.1, Var.2, Var.3
+    
+- Para encontrar asociación, necesitamos:
+
+    1. Graficar valores de variable colectada sobre capas raster
+
+    2. Extraer valores en localidades de muestreo de capas raster
+    
+    3. Hacer prueba de correlación entre las 3 capas raster y mediciones
+
+
+### Gráfico de valores colectados 1
+
+```{r echo=F, fig.height=4, fig.width=4}
+plot(r[[1]])
+points(puntos[, c("x", "y")], cex = puntos$mediciones/50)
+```
+
+### Gráfico de valores colectados 2
+
+```{r echo=T, fig.height=4, fig.width=4}
+plot(r[[2]])
+points(puntos[, c("x", "y")], cex = puntos$mediciones/50)
+```
+
+### Gráfico de valores colectados 3
+
+```{r echo=F, fig.height=4, fig.width=4}
+plot(r[[3]])
+points(puntos[, c("x", "y")], cex = puntos$mediciones/50)
+```
+
+### Extraer valores de capa raster
+
+Función `extract`, dos argumentos:
+
+1. Capa(s) raster de dónde extraer valores
+
+2. Conjunto de coordenadas para extraer valores
+
+```{r echo = T}
+valores.capas <- extract(r, puntos[, c("x", "y")])
+puntos <- data.frame(puntos, valores.capas)
+```
+
+(El objeto puntos fue generado anteriormente, pueden ver detalles de simulación en código fuente)
+
+### Valores extraídos de capa raster
+
+```{r echo = F}
+knitr::kable(puntos[1:10, ])
+```
+
+### Gráficos de dispersión 1
+
+```{r echo=F, fig.height=4, fig.width=4}
+with(puntos, plot(mediciones, Var.1, col = "red"))
+```
+
+### Gráficos de dispersión 2
+
+```{r echo=F, fig.height=4, fig.width=4}
+with(puntos, plot(mediciones, Var.2, col = "red"))
+```
+
+### Gráficos de dispersión 3
+
+```{r echo=F, fig.height=4, fig.width=4}
+with(puntos, plot(mediciones, Var.3, col = "red"))
+```
+
+### Coeficientes de correlación
+
+```{r echo = T}
+cor(puntos[, c("mediciones", "Var.1", "Var.2", "Var.3")])
+```
+
+### Conclusión
+
+En ausencia de mayor información
+
+- Mediciones están asociadas espacialmente con `Var.2`

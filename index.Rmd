@@ -24,7 +24,9 @@ knitr::opts_chunk$set(echo = TRUE)
           
 2. [Análisis de la asociación espacial entre varios fenómenos](Unidad-2/Intro-asociacion.pdf)
 
-    - [Correlación espacial](Unidad-2/Correlacion.pdf)
+    - [Correlación](Unidad-2/Correlacion.pdf) ([Código fuente de la presentación](Unidad-2/Correlacion.Rmd))
+    
+    - [Correlación espacial](Unidad-2/Correlacion-espacial.pdf)
     
     - [Regresión espacial](Unidad-2/Regresion.pdf)
     

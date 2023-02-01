@@ -97,7 +97,7 @@ Entonces las variables centradas quedan así:
 df.1 <- df
 df.1$x <- df$x - mean(df$x)
 df.1$y <- df$y - mean(df$y)
-knitr::kable(df.1, caption = "Variables *X* y *Y* centradas (con media de 0).")
+knitr::kable(head(df.1), caption = "Variables *X* y *Y* centradas (con media de 0).")
 ```
 
 
@@ -202,3 +202,75 @@ cor.test(x, y)
     - Probabilidad de que la correlación no exista
     
 - `cor 0.0774955 `, valor del coeficiente de correlación estimado
+
+### Limitaciones - Ejemplo
+
+Relación entre poblaciones de mariposas, toneladas de pesticida y televisiones (Reino Unido)
+
+- Toneladas de pesitida en aumento
+
+- Densidad de mariposas disminuye
+
+- Cantidad de licencias de televisión en aumento
+
+### Limitaciones - Gráficos
+
+Densidad de mariposas
+
+```{r echo=F, fig.height=4, fig.width=6}
+set.seed(4827)
+mariposas <- sapply(seq(0, 1, len = 25), function(x){rpois(1, lambda = 400 * exp(-x*0.25))})
+plot(1:25, mariposas, col = "red")
+lines(1:25, mariposas, col = "red")
+```
+
+### Limitaciones - Gráficos
+
+Uso de pesticidas
+
+```{r echo=F, fig.height=4, fig.width=6, fig.cap="Porcentaje de área cubierta con pesticida."}
+pesticida <- sapply(seq(0, 1, len = 25), function(x){rnorm(1, mean = 25 + 25 * (4 - 4 * exp(-0.25 * x)), sd = 3)})
+plot(1:25, pesticida, col = "red")
+lines(1:25, pesticida, col = "red")
+```
+
+### Limitaciones - Gráficos
+
+```{r echo=F, fig.height=4, fig.width=6, fig.cap="Número mensual promedio de licencias de televisión vendidas."}
+licencias <- sapply(seq(0, 1, len = 25), function(x){rnorm(1, mean = 1000 + 1000 * (1 - exp(-0.25 * x)), sd = 10)})
+plot(1:25, licencias, col = "red")
+lines(1:25, licencias, col = "red")
+```
+
+### Limitaciones - Correlaciones entre variables
+
+```{r echo=F, fig.height=4, fig.width=4, fig.align='center'}
+df.2 <- data.frame(mariposas = mariposas,
+                   pesticida = pesticida,
+                   licencias = licencias)
+pairs(df.2, col = "red")
+```
+
+### Limitaciones - Coeficientes de correlación
+
+```{r echo = F}
+mat.cor <- cor(df.2)
+knitr::kable(mat.cor, caption = "Matriz de correlación entre todas las variables.")
+```
+
+
+### Limitaciones - Conclusiones
+
+La venta de licencias de televisión mata a las mariposas
+
+### Limitaciones - Conclusiones
+
+- La correlación no mide causa y efecto
+
+- Correlación puede ocurrir al azar
+
+- Sólo sirve para medir asociación
+
+- Interpretación de asociación $\rightarrow$ Conocimiento del fenómeno estudiado
+
+    - Es más probable que, aunque la correlación sea menor, la discminución sea producto del uso de pesticidas

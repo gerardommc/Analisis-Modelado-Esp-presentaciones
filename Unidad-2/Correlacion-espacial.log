@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2022.6.17)  1 FEB 2023 13:31
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2022.6.17)  1 FEB 2023 14:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Correlacion.tex
-(./Correlacion.tex
+**Correlacion-espacial.tex
+(./Correlacion-espacial.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/beam
 er/beamer.cls
@@ -1177,8 +1177,8 @@ File: bkm-dvipdfm.def 2020-11-06 v1.29 bookmark driver for dvipdfm (HO)
 \BKM@id=\count384
 )) (/usr/share/texlive/texmf-dist/tex/latex/xurl/xurl.sty
 Package: xurl 2022/01/09 v 0.10 modify URL breaks
-) (./Correlacion.aux)
-\openout1 = `Correlacion.aux'.
+) (./Correlacion-espacial.aux)
+\openout1 = `Correlacion-espacial.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 157.
 LaTeX Font Info:    ... okay on input line 157.
@@ -1549,7 +1549,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-(./Correlacion.nav)
+(./Correlacion-espacial.nav)
 LaTeX Font Info:    Font shape `TU/FiraSansLight(0)/m/n' will be
 (Font)              scaled to size 5.09372pt on input line 157.
 LaTeX Font Info:    Font shape `TU/FiraSansLight(0)/m/n' will be
@@ -1571,202 +1571,189 @@ LaTeX Font Info:    Font shape `TU/FiraSansLight(0)/m/n' will be
 [1
 
 ]
-LaTeX Font Info:    Font shape `TU/FiraSansLight(0)/m/it' will be
-(Font)              scaled to size 9.29602pt on input line 169.
 LaTeX Font Info:    Font shape `TU/FiraSansLight(0)/b/n' will be
-(Font)              scaled to size 10.10999pt on input line 169.
+(Font)              scaled to size 8.42499pt on input line 184.
+LaTeX Font Info:    Font shape `TU/FiraSansLight(0)/b/n' will be
+(Font)              scaled to size 10.10999pt on input line 184.
 [2
 
 ]
-File: Correlacion_files/figure-beamer/unnamed-chunk-1-1.pdf Graphic file (type 
-pdf)
-<use Correlacion_files/figure-beamer/unnamed-chunk-1-1.pdf>
-LaTeX Font Info:    Font shape `TU/FiraSansLight(0)/b/n' will be
-(Font)              scaled to size 8.42499pt on input line 181.
+File: Correlacion-espacial_files/figure-beamer/unnamed-chunk-2-1.pdf Graphic fi
+le (type pdf)
+<use Correlacion-espacial_files/figure-beamer/unnamed-chunk-2-1.pdf>
 
-Overfull \vbox (26.44983pt too high) detected at line 181
+Overfull \vbox (2.35341pt too high) detected at line 196
  []
 
 [3
 
 ]
-File: Correlacion_files/figure-beamer/unnamed-chunk-2-1.pdf Graphic file (type 
-pdf)
-<use Correlacion_files/figure-beamer/unnamed-chunk-2-1.pdf>
+File: Correlacion-espacial_files/figure-beamer/unnamed-chunk-3-1.pdf Graphic fi
+le (type pdf)
+<use Correlacion-espacial_files/figure-beamer/unnamed-chunk-3-1.pdf>
 
-Overfull \vbox (26.44983pt too high) detected at line 193
+Overfull \vbox (10.08354pt too high) detected at line 201
  []
 
 [4
 
+] [5
+
+]
+\openout4 = `Correlacion-espacial.vrb'.
+
+(./Correlacion-espacial.vrb
+LaTeX Font Info:    Font shape `TU/FiraMono(0)/m/n' will be
+(Font)              scaled to size 9.22536pt on input line 3.
+) [6
+
+]
+\openout4 = `Correlacion-espacial.vrb'.
+
+(./Correlacion-espacial.vrb
+
+LaTeX Font Warning: Font shape `TU/FiraMono(0)/m/it' undefined
+(Font)              using `TU/FiraMono(0)/m/n' instead on input line 14.
+
+LaTeX Font Info:    Font shape `TU/FiraMono(0)/m/it' will be
+(Font)              scaled to size 9.22536pt on input line 16.
+)
+LaTeX Font Info:    Font shape `TU/FiraMono(0)/b/n' will be
+(Font)              scaled to size 10.09094pt on input line 252.
+[7
+
+]
+\openout4 = `Correlacion-espacial.vrb'.
+
+(./Correlacion-espacial.vrb
+File: Correlacion-espacial_files/figure-beamer/unnamed-chunk-6-1.pdf Graphic fi
+le (type pdf)
+<use Correlacion-espacial_files/figure-beamer/unnamed-chunk-6-1.pdf>
+) [8
+
 ]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.89621pt on input line 213.
+(Font)              scaled to size 7.89621pt on input line 276.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.64017pt on input line 213.
+(Font)              scaled to size 5.64017pt on input line 276.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-13.
+76.
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 11.28131pt on input line 213.
+(Font)              scaled to size 11.28131pt on input line 276.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.89691pt on input line 213.
+(Font)              scaled to size 7.89691pt on input line 276.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.64066pt on input line 213.
+(Font)              scaled to size 5.64066pt on input line 276.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.27914pt on input line 213.
+(Font)              scaled to size 11.27914pt on input line 276.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.8954pt on input line 213.
+(Font)              scaled to size 7.8954pt on input line 276.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.63957pt on input line 213.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 213
+(Font)              scaled to size 5.63957pt on input line 276.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 276
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 213
+LaTeX Font Info:    Trying to load font information for U+msb on input line 276
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
-File: mt-LatinModernRoman.cfg 2021/02/21 v1.1 microtype config. file: Latin Mod
-ern Roman (RS)
-) [5
-
-] [6
-
-]
-LaTeX Font Info:    Font shape `TU/FiraSansLight(0)/m/it' will be
-(Font)              scaled to size 8.48953pt on input line 242.
-[7
-
-]
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 12.362pt on input line 261.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 8.24133pt on input line 261.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.181pt on input line 261.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.3631pt on input line 261.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.24207pt on input line 261.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.18155pt on input line 261.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 12.36072pt on input line 261.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 8.24048pt on input line 261.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.18036pt on input line 261.
-[8
-
-]
-File: Correlacion_files/figure-beamer/unnamed-chunk-4-1.pdf Graphic file (type 
-pdf)
-<use Correlacion_files/figure-beamer/unnamed-chunk-4-1.pdf>
-[9
+) [9
 
 ] [10
 
 ] [11
 
-] [12
-
-] [13
-
-] [14
-
-] [15
+]
+File: Correlacion-espacial_files/figure-beamer/unnamed-chunk-8-1.pdf Graphic fi
+le (type pdf)
+<use Correlacion-espacial_files/figure-beamer/unnamed-chunk-8-1.pdf>
+[12
 
 ]
-\openout4 = `Correlacion.vrb'.
+\openout4 = `Correlacion-espacial.vrb'.
 
-(./Correlacion.vrb
-LaTeX Font Info:    Font shape `TU/FiraMono(0)/m/n' will be
-(Font)              scaled to size 9.22536pt on input line 5.
-) [16
-
-]
-\openout4 = `Correlacion.vrb'.
-
-(./Correlacion.vrb
-Overfull \hbox (13.75269pt too wide) in paragraph at lines 21--21
-[]\TU/FiraMono(0)/m/n/10.95 ## alternative hypothesis: true correlation is not 
-equal to 0[] 
+(./Correlacion-espacial.vrb
+File: Correlacion-espacial_files/figure-beamer/unnamed-chunk-9-1.pdf Graphic fi
+le (type pdf)
+<use Correlacion-espacial_files/figure-beamer/unnamed-chunk-9-1.pdf>
+)
+Overfull \vbox (13.60158pt too high) detected at line 351
  []
 
-) [17
+[13
 
 ]
-\openout4 = `Correlacion.vrb'.
-
-(./Correlacion.vrb) [18
-
-] [19
-
-]
-File: Correlacion_files/figure-beamer/unnamed-chunk-8-1.pdf Graphic file (type 
-pdf)
-<use Correlacion_files/figure-beamer/unnamed-chunk-8-1.pdf>
-[20
+File: Correlacion-espacial_files/figure-beamer/unnamed-chunk-10-1.pdf Graphic f
+ile (type pdf)
+<use Correlacion-espacial_files/figure-beamer/unnamed-chunk-10-1.pdf>
+[14
 
 ]
-File: Correlacion_files/figure-beamer/unnamed-chunk-9-1.pdf Graphic file (type 
-pdf)
-<use Correlacion_files/figure-beamer/unnamed-chunk-9-1.pdf>
+\openout4 = `Correlacion-espacial.vrb'.
 
-Overfull \vbox (16.02986pt too high) detected at line 488
- []
+(./Correlacion-espacial.vrb) [15
 
-[21
+] [16
 
 ]
-File: Correlacion_files/figure-beamer/unnamed-chunk-10-1.pdf Graphic file (type
- pdf)
-<use Correlacion_files/figure-beamer/unnamed-chunk-10-1.pdf>
-[22
+File: Correlacion-espacial_files/figure-beamer/unnamed-chunk-13-1.pdf Graphic f
+ile (type pdf)
+<use Correlacion-espacial_files/figure-beamer/unnamed-chunk-13-1.pdf>
+[17
 
 ]
-File: Correlacion_files/figure-beamer/unnamed-chunk-11-1.pdf Graphic file (type
- pdf)
-<use Correlacion_files/figure-beamer/unnamed-chunk-11-1.pdf>
+File: Correlacion-espacial_files/figure-beamer/unnamed-chunk-14-1.pdf Graphic f
+ile (type pdf)
+<use Correlacion-espacial_files/figure-beamer/unnamed-chunk-14-1.pdf>
+[18
 
-Overfull \vbox (24.74088pt too high) detected at line 502
- []
+]
+File: Correlacion-espacial_files/figure-beamer/unnamed-chunk-15-1.pdf Graphic f
+ile (type pdf)
+<use Correlacion-espacial_files/figure-beamer/unnamed-chunk-15-1.pdf>
+[19
 
-[23
+]
+\openout4 = `Correlacion-espacial.vrb'.
 
-] [24
+(./Correlacion-espacial.vrb) [20
 
-] [25
+]
+\openout4 = `Correlacion-espacial.vrb'.
 
-] [26
+(./Correlacion-espacial.vrb) [21
 
 ]
 \tf@nav=\write6
-\openout6 = `Correlacion.nav'.
+\openout6 = `Correlacion-espacial.nav'.
 
 \tf@toc=\write7
-\openout7 = `Correlacion.toc'.
+\openout7 = `Correlacion-espacial.toc'.
 
 \tf@snm=\write8
-\openout8 = `Correlacion.snm'.
+\openout8 = `Correlacion-espacial.snm'.
 
-(./Correlacion.aux) ) 
+(./Correlacion-espacial.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
 Here is how much of TeX's memory you used:
- 35428 strings out of 476191
- 744858 string characters out of 5812072
- 1151984 words of memory out of 5000000
- 55438 multiletter control sequences out of 15000+600000
- 475924 words of font info for 108 fonts, out of 8000000 for 9000
+ 35266 strings out of 476191
+ 740299 string characters out of 5812072
+ 1153097 words of memory out of 5000000
+ 55301 multiletter control sequences out of 15000+600000
+ 472986 words of font info for 84 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 128i,13n,171p,1812b,752s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 128i,13n,171p,1821b,643s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Correlacion.pdf (26 pages).
+Output written on Correlacion-espacial.pdf (21 pages).
