@@ -1,5 +1,5 @@
 ---
-title: "Análisis de l asociación espacia"
+title: "Análisis de la asociación espacial"
 subtitle: "Correlación entre variables espaciales"
 author: "Gerardo Martín"
 fontsize: 11pt
