@@ -1,0 +1,123 @@
+---
+title: "Análisis de la asociación espacial"
+subtitle: "Usos de I de Moran"
+author: "Gerardo Martín"
+fontsize: 11pt
+output:
+  beamer_presentation:
+    theme: metropolis
+    highlight: pygments
+    slide_level: 3
+    fig_height: 6
+    fig_caption: true
+    latex_engine: xelatex
+    keep_tex: true
+date: '2022-06-29'
+---
+
+### Papel del espacio
+
+- Crea correlación espacial
+
+    - Observaciones no son independientes
+    
+    - Interpretación correcta de regresión asume independencia
+    
+- Medición de independencia
+
+    - Antes y después de análsisis de regresión
+    
+    - Después de regresión: sobre residuales
+    
+    - Residuales: lo que la regresión no explica
+    
+### El procedimiento
+
+1. Medir correlación
+
+2. Hacer análisis de regresión
+
+3. Medir correlación de residuales de todos los modelos
+
+4. Si residuales están espacialmente correlacionados:
+
+    - Identificar otras covariables
+    
+    - Incluir efecto del espacio
+    
+    - Implementar interpolación (excepciones más adelante)
+    
+# El análisis
+
+### Importación de datos colectados
+
+```{r echo = T, fig.align='center', fig.width=3, fig.height=3}
+datos <- read.csv("../Datos-ejemplos/Datos-puntos-Moran-2.csv")
+with(datos, plot(Longitud, Latitud, cex = Mediciones/5))
+```
+
+### Prueba previa de correlación
+
+```{r echo = T}
+library(spdep)
+
+vecindad <- dnearneigh(x = as.matrix(datos[, c("Longitud", "Latitud")]), d1 = 0, d2 = 75, longlat = T)
+vec.listw <- nb2listw(vecindad)
+S0 <- sum(nb2mat(vecindad))
+
+I.meds <- moran.test(x = datos$Mediciones, listw = vec.listw)
+```
+
+### Correlación espacial de mediciones
+
+```{r echo = T}
+I.meds
+```
+
+### Importación de variables raster
+
+```{r echo = T}
+library(raster)
+r <- stack(paste0("../Datos-ejemplos/Var-", c(1, 2), ".tif"))
+```
+
+### Importación de variables raster
+
+```{r echo = F, fig.width=8, fig.height=4, fig.align='center'}
+plot(r)
+```
+
+### Extracción de valores en localidades de muestreo
+
+```{r echo=T}
+r.extract <- data.frame(extract(r, datos[, c("Longitud", "Latitud")]))
+datos <- data.frame(datos, r.extract)
+```
+
+```{r echo = F}
+knitr::kable(head(datos))
+```
+
+### Ajuste de primer modelo
+
+```{r}
+modelo.1 <- lm(Mediciones ~ Var.2, data = datos)
+summary(modelo.1)
+```
+
+
+### Extracción y visualización de residuales
+
+```{r echo = T, fig.align="center", fig.width=3, fig.height=3}
+datos$Residuales <-  residuals(modelo.1)
+with(datos, plot(Longitud, Latitud, cex = Residuales))
+```
+
+
+### Prueba de correlación de residuales
+
+```{r}
+I.res <- moran.test(x = datos$Residuales, listw = vec.listw)
+I.res
+```
+
