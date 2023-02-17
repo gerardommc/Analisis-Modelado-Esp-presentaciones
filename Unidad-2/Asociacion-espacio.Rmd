@@ -117,14 +117,14 @@ with(datos, plot(Longitud, Latitud, cex = reg))
 
 1. Instalación y carga de paquete:
 
-```{r echo = T}
+```{r echo = T, warning = F, message=F}
 library(spdep)
 ```
 
 ```{r echo = T}
 vecindad <- dnearneigh(x = as.matrix(datos[, c("Longitud", "Latitud")]), d1 = 0, d2 = 75, longlat = T)
 vec.listw <- nb2listw(vecindad)
-S0 <- sum(nb2mat(vecindad))
+#S0 <- sum(nb2mat(vecindad))
 ```
 
 - `x` son las coordenadas

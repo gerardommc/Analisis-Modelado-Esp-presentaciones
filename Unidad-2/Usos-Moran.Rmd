@@ -58,7 +58,7 @@ with(datos, plot(Longitud, Latitud, cex = Mediciones/5))
 
 ### Prueba previa de correlación
 
-```{r echo = T}
+```{r echo = T, message=F, warning=F}
 library(spdep)
 
 vecindad <- dnearneigh(x = as.matrix(datos[, c("Longitud", "Latitud")]), d1 = 0, d2 = 75, longlat = T)

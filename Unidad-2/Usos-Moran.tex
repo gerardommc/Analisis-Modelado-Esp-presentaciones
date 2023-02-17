@@ -213,33 +213,7 @@
 \begin{Shaded}
 \begin{Highlighting}[]
 \FunctionTok{library}\NormalTok{(spdep)}
-\end{Highlighting}
-\end{Shaded}
 
-\begin{verbatim}
-## Loading required package: sp
-\end{verbatim}
-
-\begin{verbatim}
-## Loading required package: spData
-\end{verbatim}
-
-\begin{verbatim}
-## To access larger datasets in this package, install the spDataLarge
-## package with: `install.packages('spDataLarge',
-## repos='https://nowosad.github.io/drat/', type='source')`
-\end{verbatim}
-
-\begin{verbatim}
-## Loading required package: sf
-\end{verbatim}
-
-\begin{verbatim}
-## Linking to GEOS 3.10.2, GDAL 3.4.1, PROJ 8.2.1; sf_use_s2() is TRUE
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
 \NormalTok{vecindad }\OtherTok{\textless{}{-}} \FunctionTok{dnearneigh}\NormalTok{(}\AttributeTok{x =} \FunctionTok{as.matrix}\NormalTok{(datos[, }\FunctionTok{c}\NormalTok{(}\StringTok{"Longitud"}\NormalTok{, }\StringTok{"Latitud"}\NormalTok{)]), }\AttributeTok{d1 =} \DecValTok{0}\NormalTok{, }\AttributeTok{d2 =} \DecValTok{75}\NormalTok{, }\AttributeTok{longlat =}\NormalTok{ T)}
 \NormalTok{vec.listw }\OtherTok{\textless{}{-}} \FunctionTok{nb2listw}\NormalTok{(vecindad)}
 \NormalTok{S0 }\OtherTok{\textless{}{-}} \FunctionTok{sum}\NormalTok{(}\FunctionTok{nb2mat}\NormalTok{(vecindad))}

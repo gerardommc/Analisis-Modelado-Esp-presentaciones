@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2022.6.17)  16 FEB 2023 14:35
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2022.5.2)  17 FEB 2023 17:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1617,28 +1617,11 @@ File: Asociacion-imagenes/Reina-Torre.jpg Graphic file (type bmp)
 \openout4 = `Asociacion-espacio.vrb'.
 
 (./Asociacion-espacio.vrb
-Overfull \hbox (56.18936pt too wide) in paragraph at lines 23--23
-[]\TU/FiraMono(0)/m/n/10.95 ## To access larger datasets in this package, insta
-ll the spDataLarge[] 
- []
 
+LaTeX Font Warning: Font shape `TU/FiraMono(0)/m/it' undefined
+(Font)              using `TU/FiraMono(0)/m/n' instead on input line 19.
 
-Overfull \hbox (15.59769pt too wide) in paragraph at lines 23--23
-[]\TU/FiraMono(0)/m/n/10.95 ## repos=[]https://nowosad.github.io/drat/[], type=
-[]source[])[][] 
- []
-
-
-Overfull \hbox (59.8795pt too wide) in paragraph at lines 31--31
-[]\TU/FiraMono(0)/m/n/10.95 ## Linking to GEOS 3.10.2, GDAL 3.4.1, PROJ 8.2.1; 
-sf_use_s2() is TRUE[] 
- []
-
-)
-Overfull \vbox (76.14331pt too high) detected at line 344
- []
-
-[17
+) [17
 
 ]
 \openout4 = `Asociacion-espacio.vrb'.
@@ -1660,12 +1643,16 @@ Overfull \vbox (76.14331pt too high) detected at line 344
 \tf@snm=\write8
 \openout8 = `Asociacion-espacio.snm'.
 
-(./Asociacion-espacio.aux) ) 
+(./Asociacion-espacio.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
 Here is how much of TeX's memory you used:
- 33693 strings out of 476191
- 708630 string characters out of 5812072
- 1125063 words of memory out of 5000000
- 53753 multiletter control sequences out of 15000+600000
+ 33695 strings out of 476191
+ 708674 string characters out of 5812073
+ 1121060 words of memory out of 5000000
+ 53755 multiletter control sequences out of 15000+600000
  472978 words of font info for 83 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  128i,13n,171p,1819b,752s stack positions out of 5000i,500n,10000p,200000b,80000s
