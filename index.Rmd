@@ -30,6 +30,10 @@ knitr::opts_chunk$set(echo = TRUE)
     
     - [Regresión espacial](Unidad-2/Regresion.pdf)
     
+    - [Asociación con el espacio](Unidad-2/Asociacion-espacio.pdf)
+    
+    - [Usos del índice de Moran](Unidad-2/Usos-Moran.pdf)
+    
     - [Interpolación](Unidad-2/Interpolacion.pdf)
     
 3. Modelado de áreas de distribución y nichos ecológicos
