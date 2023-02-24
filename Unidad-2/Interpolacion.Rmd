@@ -1,0 +1,173 @@
+---
+title: "Análisis de la asociación espacial"
+subtitle: "Interpolación"
+author: "Gerardo Martín"
+fontsize: 11pt
+output:
+  beamer_presentation:
+    theme: metropolis
+    highlight: pygments
+    slide_level: 3
+    fig_height: 6
+    fig_caption: true
+    latex_engine: xelatex
+    keep_tex: true
+date: '2022-06-29'
+---
+
+# ¿Qué es la interpolación?
+
+### Descripción
+
+Procedimiento analítico para predecir variabilidad de proceso espacial a partir de los valores observados y su ubicación
+
+### Diagrama
+
+![](Interpolacion/Interpolacion)
+
+### Ejemplo
+
+Variable:
+
+$$X = \{1, 2, , 4, , 6, , , 9 \}$$
+
+Valores faltantes:
+
+$$3, 5, 7$$
+
+### Ejemplo en 2 dimensiones
+
+$$\begin{matrix}
+1 &   & 3 & 4 \\
+  & 2 &   & 5 \\
+3 & 4 & 1 & 6 \\
+4 &   & 2 & 
+\end{matrix}$$
+
+### Solución 1
+
+Hay múltiples soluciones, por ejemplo, promedio de vecinos tipo torre:
+
+$$\begin{matrix}
+1 & 2 & 3 & 4 \\
+2 & 2 & 2.75 & 5 \\
+3 & 4 & 1 & 6 \\
+4 & 3.33 & 2 & 4
+\end{matrix}$$
+
+### Solución 2
+
+Promedio de vecinos *existentes* tipo reina
+
+$$\begin{matrix}
+1 & 2 & 3 & 4 \\
+2.4 & 2 & 3.625 & 5 \\
+3 & 4 & 1 & 6 \\
+4 & 2.8 & 2 & 3
+\end{matrix}$$
+
+# Técnicas utilizadas comunmente
+
+### Vecino más próximo
+
+Consiste en:
+
+1. Identificar unidades espaciales más cercanas a aquellas donde contamos con mediciones
+2. Asignar a esas unidades espaciales los valores de la unidad cercana
+
+### Ejemplo de vecino más próximo
+
+![](Interpolacion/Ejemplo-vecino-0.png)
+
+### Ejemplo de vecino más próximo
+
+![](Interpolacion/Ejemplo-vecino-1.png)
+
+### Ejemplo de vecino más próximo
+
+![](Interpolacion/Ejemplo-vecino-2.png)
+
+### Ejemplo de vecino más próximo
+
+![](Interpolacion/Ejemplo-vecino-3.png)
+
+### Ejemplo de vecino más próximo
+
+![](Interpolacion/Ejemplo-vecino-4.png)
+
+### Ejemplo de vecino más próximo
+
+![](Interpolacion/Ejemplo-vecino-5.png)
+
+### Ejemplo de vecino más próximo
+
+![](Interpolacion/Ejemplo-vecino-6.png)
+
+### Para muchas unidades espaciales
+
+1. Crear teselado
+2. Asignar valores a cada unidad espacial del teselado
+3. Rasterizar el teselado
+
+### Crear teselado
+
+![](Interpolacion/Voro-1.png)
+
+### El teselado
+
+- Genera polígonos alrededor de los puntos de muestreo
+
+- Cualquier punto dentro de los polígonos está más cerca del sitio de muestreo adentro que cualquier otro
+
+### Vista cercana del teselado
+
+![](Interpolacion/Voronoi-cerca-0.png)
+
+### Vista cercana del teselado
+
+![](Interpolacion/Voronoi-cerca-1.png)
+
+### Vista cercana del teselado
+
+![](Interpolacion/Voronoi-cerca-2.png)
+
+### La interpolación
+
+![](Interpolacion/Ngb-1.png)
+
+# Otras metodologías de interpolación
+
+### Ponderada por inverso de la distancia
+
+- En vecino más próximo se asigna mismo valor que de mediciones
+
+- En inverso de distancia, valor es inversamente proporcional a distancia lineal
+
+### IDW
+
+![](Interpolacion/Idw-1.png)
+
+### Regresión sobre las coordenadas
+
+- Valores son función de coordenadas geográficas
+
+$$y(Lat, Lon) = \alpha + \beta_1 Lat + \beta_2 Lon$$
+- **Sólo sirve si el gradiente en espacio es lineal**
+
+### RSC
+
+![](Interpolacion/Gradientes-1.png)
+
+### Splines
+
+- Regresión sobre coordenadas, sonde gradiente no es lineal
+
+- Puede ajustar relaciones muy complejas entre variable dependiente e independientes
+
+### Splines - Ejemplo
+
+![](Interpolacion/Splines.png)
+
+### Ejemplo de splines
+
+![](Interpolacion/Splines-ejemplo.png)
