@@ -1,0 +1,96 @@
+---
+title: "Tutorial de IDW y splines con R"
+author: "Gerardo"
+date: "2023-02-27"
+output: 
+      bookdown::html_document2:
+            toc: true 
+            number_sections: true
+            toc_float: true
+            theme: flatly
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Interpolación ponderada por el inverso de la distancia
+
+Antes de la interpolación, es necesario formatear de manera especial los datos. La base que contiene la localidades de muestreo y las mediciones, tenemos que transformarla en un objeto reconocible por el paquete `sp`, de modo que sepa qué columnas contienen las coordenadas $x,y$, y cuáles los datos:
+
+```{r echo = T, message=F, warning=F}
+library(gstat); library(raster)
+
+puntos <- read.csv("../Datos-ejemplos/Datos-puntos-Moran.csv")
+
+r.0 <- raster("../Datos-ejemplos/Var-1.tif")
+
+datos.sp <- puntos
+coordinates(datos.sp) <- ~ Longitud + Latitud
+proj4string(datos.sp) <- CRS(proj4string(r.0))
+```
+
+Y hacemos lo mismo con el ráster de referencia, primero transformándolo en data.frame y luego en `SpatialPointsDataFrame`:
+
+```{r}
+new.data <- data.frame(rasterToPoints(r.0))[, 1:2]
+names(new.data) <- c("Longitud", "Latitud")
+coordinates(new.data) <- ~ Longitud + Latitud
+proj4string(new.data) <- CRS(proj4string(r.0))
+```
+
+
+Nota que en ambos casos anteriores tuvimos que especificar qué sistema de coordenadas se usó, en este caso fue el datum WGS84 con número de identificación EPSG 4326.
+
+Y ahora sí, corremos la rutina de interpolación con la función `idw` (inverse distance weighted) de `gstat`.
+
+```{r}
+inv.dist <- idw(formula = Mediciones ~ 1, locations = datos.sp, newdata = new.data)
+```
+
+El objeto que produce la función `idw` es un `SpatialPolygonsDataFrame` (vector poligonal), donde cada celda corresponde a un píxel. Para transformar a raster utilizaremos las coordenadas de `new.data` y los valores interpolados con la función `rasterFromXYZ`:
+
+```{r echo = T, fig.align='center', fig.cap="Interpolación por inverso de la distancia."}
+r.idw <- rasterFromXYZ(data.frame(coordinates(new.data), inv.dist$var1.pred))
+
+#Gráfica
+par(mfrow = c(1, 2))
+plot(r.idw, main = "Inverso de la distancia")
+plot(r.idw)
+points(datos.sp, pch = 20, col = "red", cex = 0.5)
+```
+
+# Regresión sobre las coordenadas con splines
+
+Anteriormente vimos cómo interpolar haciendo regresión sobre las coordenadas, lo cual sólo es efectivo si existen gradientes lineales en relación a la longitud y latitud. Sin embargo, en la inmensa mayoría de las situaciones existirán estructuras topográficas y atributos geográficos que harán que las relaciones entre lo que medimos y las coordenadas sean no lineales. Por lo tanto, una herramienta más útil que la regresión lineal son los splines implementada en R por medio de modelos lineales aditivos.
+
+Para estos análisis podemos utilizar todos los objetos que ya formateamos hasta ahora. Las funciones para ajustar modelos lineales aditivos están en el paquete `mgcv`, instalado por defecto con R, en la función `gam` (generalised additive model). Por defecto, las fórmulas que se usan en `gam` son idénticas a las que se usan en `lm` (modelo lineal). Para que una variable pueda estimar relaciones no lineales, necesitamos espacificar con otras funciones el tipo de splines que se. Veamos:
+
+```{r echo = T}
+library(mgcv)
+
+spl <- gam(Mediciones ~ s(Longitud, Latitud, k = 25), data = puntos)
+```
+
+donde s es la función suavizadora o spline, y k es el número de nodos que habrá en cada variable. Yo decidí arbitrariamente utilizar 25 nodos, pero en realidad puede haber objetivamente más o menos nodos. Los nodos son puntos igualmente espaciados en el rango de valores de cada variable en los cuales se estimarán parámetros del spline. Por ejemplo, para Longitud -100 – -101, un parámetro, y otro para -101 -- -102.
+
+Para ver las predicciones de `gam`:
+
+```{r echo = T, fig.align='center', fig.cap="Resultado de la interpolación con splines en un modelo aditivo generalizado, haciendo regresión sobre las coordenadas."}
+spl.pred <- predict(spl, newdata = data.frame(coordinates(new.data)))
+
+r.spl <- rasterFromXYZ(data.frame(coordinates(new.data), spl.pred))
+
+plot(r.spl, main = "Interpolalción con splines")
+points(datos.sp, pch = 20, col = "red", cex = 0.5)
+```
+
+Otra implementaciín de splines, incluso más adecuada para la interpolación espacial, se llama Thin Plate Spline, disponible con la función `Tps` en el paquete `fields`.
+
+# Otros tipos de interpolación
+
+1. Bicúbico
+2. Bilineal
+3. Kriging
+4. Regresión-Kriging
+
+[Regresar al índice del curso](../index.html)
