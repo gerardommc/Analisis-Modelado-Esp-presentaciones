@@ -20,7 +20,7 @@ capas.f <- list.files(path=paste(system.file(package="dismo"), '/ex',
 capas.r <- stack(capas.f)
 
 par(mar = c(1,1,1,1))
-plot(capas.r[[1]]); points(brad.p$lon, brad.p$lat)
+plot(capas.r[[1]]); points(brad.sp)
 
 buf <- rgeos::gBuffer(brad.sp, byid = F, width = 10)
 
@@ -56,17 +56,28 @@ wt <- rep(1.0E-6, nrow(capas.df))
 
 wt[capas.df$ID == 0] = length(wt)/sum(capas.df$ID == 0)
 
-
 ## Regresión Poisson
 
-modelo <- step(glm(ID/wt ~ bio1 + bio6 + bio12 + I(bio1^2) + I(bio6^2) + I(bio12^2), 
+modelo <- glm(ID/wt ~ bio1 + bio12 + bio7 +
+                I(bio1^2) + I(bio12^2) + I(bio7^2), 
                    data = capas.df, weights = wt,
-                   family = poisson()))
+                   family = poisson())
 
-pred.modelo <- exp(predict(modelo))
+modelo.1 <- glm(ID/wt ~ bio1 + bio16 + bio17 + bio7 +
+                I(bio1^2) + I(bio16^2)+ I(bio17^2) + I(bio7^2), 
+              data = capas.df, weights = wt,
+              family = poisson())
+
+mod.step <- step(modelo.1)
+
+summary(mod.step)
+
+pred.modelo <- exp(predict(mod.step))
 
 pred.r <- rasterFromXYZ(data.frame(capas.df[, c("x", "y")], pred.modelo))
 plot(pred.r)
+
+points(brad.sp, pch = 20, cex = 0.1)
 
 ## Mapas binarios
 
