@@ -45,18 +45,21 @@
   \frame{\subsectionpage}
 }
 \usepackage{amsmath,amssymb}
-\usepackage{lmodern}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math}
+  \usepackage{unicode-math} % this also loads fontspec
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
+\usepackage{lmodern}
 \usetheme[]{metropolis}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \IfFileExists{microtype.sty}{% use microtype if available
@@ -84,7 +87,7 @@
 \fi
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
+\urlstyle{same}
 \hypersetup{
   pdftitle={Análisis y Modelado Espacial},
   pdfauthor={Gerardo Martín},
@@ -156,21 +159,6 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Sobre el curso}
-\protect\hypertarget{sobre-el-curso}{}
-\begin{itemize}
-\tightlist
-\item
-  Introducción al modelado espacial
-\item
-  Análisis de la asociación espacial entre fenómenos
-\item
-  Modelado de áreas de distribución y nichos ecológicos
-\item
-  Discusión y conclusiones
-\end{itemize}
-\end{frame}
-
 \begin{frame}{Contenidos del curso}
 \protect\hypertarget{contenidos-del-curso}{}
 \begin{enumerate}
@@ -202,15 +190,23 @@ importancia médica y los accidentes provocados por estos en México}
 \protect\hypertarget{profesorxs-participantes}{}
 \begin{itemize}
 \item
-  Dra. Iris Neri Flores \(\rightarrow\) Aplicaciones de modelos
-  digitales de elevación
-\item
-  Dr.~Gustavo Martín
+  Dra. Iris Neri Flores
 
   \begin{itemize}
   \tightlist
   \item
-    Análisis multicriterio, Calidad de datos, Cambio de uso y cobertura
+    Aplicaciones de modelos digitales de elevación
+  \end{itemize}
+
+  -Análisis Multicriterio
+\item
+  Mtra. Citlalli Barrena
+
+  \begin{itemize}
+  \item
+    Calidad de datos
+  \item
+    Cambio de uso y cobertura
   \end{itemize}
 \end{itemize}
 \end{frame}

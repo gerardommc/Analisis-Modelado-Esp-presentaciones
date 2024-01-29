@@ -43,13 +43,6 @@ date: '2022-06-29'
 - ¿En qué se imaginan trabajando?
 - ¿Qué esperan del curso?
 
-### Sobre el curso
-
-- Introducción al modelado espacial
-- Análisis de la asociación espacial entre fenómenos
-- Modelado de áreas de distribución y nichos ecológicos
-- Discusión y conclusiones
-    
 ### Contenidos del curso
 
 1. Introducción
@@ -65,11 +58,17 @@ date: '2022-06-29'
 
 ### Profesorxs participantes
 
-- Dra. Iris Neri Flores $\rightarrow$ Aplicaciones de modelos digitales de elevación
+- Dra. Iris Neri Flores
 
-- Dr. Gustavo Martín
+    - Aplicaciones de modelos digitales de elevación
+    
+    -Análisis Multicriterio
 
-    - Análisis multicriterio, Calidad de datos, Cambio de uso y cobertura
+- Mtra. Citlalli Barrena
+
+    - Calidad de datos
+    
+    - Cambio de uso y cobertura
 
 ### Lo feo ... las evaluaciones
 
