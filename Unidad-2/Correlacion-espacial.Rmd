@@ -24,9 +24,9 @@ knitr::opts_chunk$set(dev = 'pdf')
 Además de valores de varibles, tenemos ubicación, p. ej.
 
 ```{r echo = F, warning=F, message=F}
-library(raster)
-r <- stack(list.files("../Datos-ejemplos/", "tif", full.names = T))
-r.df <- data.frame(rasterToPoints(r))
+library(terra)
+r <- rast(list.files("../Datos-ejemplos/", "tif", full.names = T, recursive = F))
+r.df <- as.data.frame(r, xy = T)
 knitr::kable(head(r.df), caption = "Primeras seis filas de una conjunto de variables raster tabuladas. Las coordenadas corresponden al centro de cada píxel.")
 ```
 
@@ -71,9 +71,9 @@ pairs(raster)
 
 ```{r echo = T, eval=F}
 # para una sola capa
-r <- raster("../Datos-ejemplos/Var-1.tif") 
+r <- rast("../Datos-ejemplos/Var-1.tif") 
 #Para varias capas alineadas
-r <- stack(list.files("../Datos-ejemplos/", 
+r <- rast(list.files("../Datos-ejemplos/", 
                       "tif", full.names = T))
 ```
 
@@ -95,15 +95,14 @@ pairs(r)
 
 - Cuando tenemos mediciones colectadas, podríamos tener sólo coordenadas de los puntos de muestreo
 
-```{r echo = F}
+```{r echo = F, warning = F}
 set.seed(19873)
-puntos <- coordinates(r)
+puntos <- as.data.frame(r, xy = T)[, c("x", "y")]
 puntos <- puntos[sample(1:nrow(puntos), 100),]
-puntos <- data.frame(puntos)
 puntos$x <- puntos$x + runif(100, -0.1, 0.1)
 puntos$y <- puntos$y + runif(100, -0.1, 0.1)
 var <- extract(r[[2]], puntos)
-puntos$mediciones <- var * rnorm(1, 2, 0.1) + rnorm(100, -150, 20)
+puntos$mediciones <- var$`Var-2` * rnorm(1, 2, 0.1) + rnorm(100, -150, 20)
 puntos <- na.omit(puntos)
 knitr::kable(head(puntos), caption = "Primeras seis filas de una base de datos de mediciones colectadas en campo.")
 ```

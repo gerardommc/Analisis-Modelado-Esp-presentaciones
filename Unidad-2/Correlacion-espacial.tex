@@ -45,18 +45,21 @@
   \frame{\subsectionpage}
 }
 \usepackage{amsmath,amssymb}
-\usepackage{lmodern}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math}
+  \usepackage{unicode-math} % this also loads fontspec
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
+\usepackage{lmodern}
 \usetheme[]{metropolis}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \IfFileExists{microtype.sty}{% use microtype if available
@@ -142,7 +145,7 @@
 \fi
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
+\urlstyle{same}
 \hypersetup{
   pdftitle={Análisis de la asociación espacial},
   pdfauthor={Gerardo Martín},
@@ -165,13 +168,13 @@ Además de valores de varibles, tenemos ubicación, p.~ej.
 \caption{Primeras seis filas de una conjunto de variables raster
 tabuladas. Las coordenadas corresponden al centro de cada
 píxel.}\tabularnewline
-\toprule()
-x & y & Var.1 & Var.2 & Var.3 \\
-\midrule()
+\toprule\noalign{}
+x & y & Var-1 & Var-2 & Var-3 \\
+\midrule\noalign{}
 \endfirsthead
-\toprule()
-x & y & Var.1 & Var.2 & Var.3 \\
-\midrule()
+\toprule\noalign{}
+x & y & Var-1 & Var-2 & Var-3 \\
+\midrule\noalign{}
 \endhead
 -104.8380 & 29.93903 & 186 & 92 & 173 \\
 -104.6714 & 29.93903 & 190 & 96 & 178 \\
@@ -179,7 +182,7 @@ x & y & Var.1 & Var.2 & Var.3 \\
 -104.3380 & 29.93903 & 166 & 79 & 165 \\
 -104.1714 & 29.93903 & 171 & 83 & 170 \\
 -104.0047 & 29.93903 & 176 & 87 & 174 \\
-\bottomrule()
+\bottomrule\noalign{}
 \end{longtable}
 \end{frame}
 
@@ -243,9 +246,9 @@ Función \texttt{pairs} hace todo en automático, uso
 \begin{Shaded}
 \begin{Highlighting}[]
 \CommentTok{\# para una sola capa}
-\NormalTok{r }\OtherTok{\textless{}{-}} \FunctionTok{raster}\NormalTok{(}\StringTok{"../Datos{-}ejemplos/Var{-}1.tif"}\NormalTok{) }
+\NormalTok{r }\OtherTok{\textless{}{-}} \FunctionTok{rast}\NormalTok{(}\StringTok{"../Datos{-}ejemplos/Var{-}1.tif"}\NormalTok{) }
 \CommentTok{\#Para varias capas alineadas}
-\NormalTok{r }\OtherTok{\textless{}{-}} \FunctionTok{stack}\NormalTok{(}\FunctionTok{list.files}\NormalTok{(}\StringTok{"../Datos{-}ejemplos/"}\NormalTok{, }
+\NormalTok{r }\OtherTok{\textless{}{-}} \FunctionTok{rast}\NormalTok{(}\FunctionTok{list.files}\NormalTok{(}\StringTok{"../Datos{-}ejemplos/"}\NormalTok{, }
                       \StringTok{"tif"}\NormalTok{, }\AttributeTok{full.names =}\NormalTok{ T))}
 \end{Highlighting}
 \end{Shaded}
@@ -284,24 +287,24 @@ Función \texttt{pairs} hace todo en automático, uso
   de los puntos de muestreo
 \end{itemize}
 
-\begin{longtable}[]{@{}rrr@{}}
+\begin{longtable}[]{@{}lrrr@{}}
 \caption{Primeras seis filas de una base de datos de mediciones
 colectadas en campo.}\tabularnewline
-\toprule()
-x & y & mediciones \\
-\midrule()
+\toprule\noalign{}
+& x & y & mediciones \\
+\midrule\noalign{}
 \endfirsthead
-\toprule()
-x & y & mediciones \\
-\midrule()
+\toprule\noalign{}
+& x & y & mediciones \\
+\midrule\noalign{}
 \endhead
--102.7928 & 29.57881 & 49.62024 \\
--103.6011 & 27.38053 & 41.14992 \\
--104.5670 & 25.53772 & 137.04156 \\
--101.8276 & 29.87109 & 51.70786 \\
--100.5730 & 27.40428 & 103.70981 \\
--101.0474 & 29.20245 & 75.43274 \\
-\bottomrule()
+73 & -102.7928 & 29.57881 & 49.62024 \\
+459 & -103.6011 & 27.38053 & 41.14992 \\
+813 & -104.5670 & 25.53772 & 137.04156 \\
+49 & -101.8276 & 29.87109 & 51.70786 \\
+476 & -100.5730 & 27.40428 & 103.70981 \\
+144 & -101.0474 & 29.20245 & 75.43274 \\
+\bottomrule\noalign{}
 \end{longtable}
 \end{frame}
 
@@ -379,22 +382,22 @@ simulación en código fuente)
 
 \begin{frame}{Valores extraídos de capa raster}
 \protect\hypertarget{valores-extrauxeddos-de-capa-raster}{}
-\begin{longtable}[]{@{}rrrrrr@{}}
-\toprule()
-x & y & mediciones & Var.1 & Var.2 & Var.3 \\
-\midrule()
+\begin{longtable}[]{@{}lrrrrrrr@{}}
+\toprule\noalign{}
+& x & y & mediciones & ID & Var.1 & Var.2 & Var.3 \\
+\midrule\noalign{}
 \endhead
--102.7928 & 29.57881 & 49.62024 & 199 & 106 & 161 \\
--103.6011 & 27.38053 & 41.14992 & 179 & 105 & 143 \\
--104.5670 & 25.53772 & 137.04156 & 187 & 126 & 193 \\
--101.8276 & 29.87109 & 51.70786 & 203 & 105 & 149 \\
--100.5730 & 27.40428 & 103.70981 & 224 & 135 & 143 \\
--101.0474 & 29.20245 & 75.43274 & 213 & 121 & 131 \\
--102.5358 & 28.58792 & 35.05952 & 174 & 101 & 132 \\
--101.4132 & 28.86275 & 69.94669 & 209 & 125 & 134 \\
--102.3974 & 26.52351 & 92.91473 & 211 & 134 & 153 \\
--102.6020 & 25.42059 & 131.78474 & 218 & 147 & 148 \\
-\bottomrule()
+73 & -102.7928 & 29.57881 & 49.62024 & 1 & 199 & 106 & 161 \\
+459 & -103.6011 & 27.38053 & 41.14992 & 2 & 179 & 105 & 143 \\
+813 & -104.5670 & 25.53772 & 137.04156 & 3 & 187 & 126 & 193 \\
+49 & -101.8276 & 29.87109 & 51.70786 & 4 & 203 & 105 & 149 \\
+476 & -100.5730 & 27.40428 & 103.70981 & 5 & 224 & 135 & 143 \\
+144 & -101.0474 & 29.20245 & 75.43274 & 6 & 213 & 121 & 131 \\
+255 & -102.5358 & 28.58792 & 35.05952 & 7 & 174 & 101 & 132 \\
+201 & -101.4132 & 28.86275 & 69.94669 & 8 & 209 & 125 & 134 \\
+646 & -102.3974 & 26.52351 & 92.91473 & 9 & 211 & 134 & 153 \\
+824 & -102.6020 & 25.42059 & 131.78474 & 10 & 218 & 147 & 148 \\
+\bottomrule\noalign{}
 \end{longtable}
 \end{frame}
 
