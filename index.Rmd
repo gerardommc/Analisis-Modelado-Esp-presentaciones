@@ -44,5 +44,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
     - [Caso demografico](Unidad-4/Caso-demografico.pdf)
     
+        - [Tutorial](Unidad-4/Modelo-Hev.html)
+        
+        - [Representación espacial](Unidad-4/Rep-esp-HeV.html)
+    
     - [Caso correlativo](Unidad-4/Caso-correlativo.pdf)
     
