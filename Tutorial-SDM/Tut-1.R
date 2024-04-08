@@ -5,15 +5,13 @@ library(dismo); library(terra)
 # Puntos de presencia
 
 brad.f <- paste(system.file(package="dismo"), "/ex/bradypus.csv", sep="")
-brad.p <- read.csv(brad.f)
+brad.p <- read.csv("Bradypus-sp.csv")
 
 brad.sp <- vect(brad.p[, c("lon", "lat")])
 
 #Capas raster
 
-capas.f <- list.files(path=paste(system.file(package="dismo"), '/ex',
-                                 sep=''), pattern='grd', full.names=TRUE)
-capas.r <- rast(capas.f)
+capas.r <- rast("Capas.tif")
 
 par(mar = c(1,1,1,1))
 plot(capas.r[[1]]); points(brad.sp)
@@ -38,9 +36,9 @@ dev.off()
 
 ## Modelo de puntos Poisson
 
-source("Nicho/Funciones-spatstat/imFromStack.R")
-source("Nicho/Funciones-spatstat/winFromRaster.R")
-source("Nicho/Funciones-spatstat/plotQuantIntens.R")
+source("imFromStack.R")
+source("winFromRaster.R")
+source("plotQuantIntens.R")
 
 capas.im <- imFromStack(capas.rm)
 w <- as.owin(capas.im[[1]])

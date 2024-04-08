@@ -40,9 +40,9 @@ knitr::opts_chunk$set(echo = TRUE)
     
 3. Modelado de áreas de distribución y nichos ecológicos
 
-    - [Nociones de nicho ecológico](Unidad-3/Nociones.pdf)
+    - [Introducción](Unidad-4/Introduccion-nichos.pdf)
 
-    - [Métodos para modelación de áreas y nichos](Unidad-3/Metodos.pdf)
+    - [Caso demografico](Unidad-4/Caso-demografico.pdf)
     
-    - [Usos de los modelos de áreas de distribución y nicho ecológico](Unidad-3/Usos.pdf)
+    - [Caso correlativo](Unidad-4/Caso-correlativo.pdf)
     
