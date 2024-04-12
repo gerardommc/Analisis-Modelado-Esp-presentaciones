@@ -4,7 +4,6 @@ library(dismo); library(terra)
 
 # Puntos de presencia
 
-brad.f <- paste(system.file(package="dismo"), "/ex/bradypus.csv", sep="")
 brad.p <- read.csv("Bradypus-sp.csv")
 
 brad.sp <- vect(brad.p[, c("lon", "lat")])
@@ -94,4 +93,24 @@ plot(k.mod)
 
 diagnose.ppm(mod.step)
 
-saveRDS(mod.step, "Cambio-climatico/Datos/Modelo-ppm.rds")
+saveRDS(mod.step, "Modelo-ppm.rds")
+
+## Distribución binaria
+
+pred.r <- rast(pred.modelo)
+
+# Valores de favorabilidad predichos en localidades de presencia:
+
+val.pres <- extract(pred.r, brad.sp)
+
+umbral.05 <- quantile(val.pres$lyr.1, 0.05)
+
+dist.05 <-  pred.r > umbral.05
+
+plot(dist.05)
+
+## Guardando los resultados
+
+writeRaster(dist.05, "Distribucion.tif")
+writeRaster(pred.r, "Favorabilidad.tif")
+

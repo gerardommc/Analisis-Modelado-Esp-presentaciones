@@ -38,7 +38,7 @@ knitr::opts_chunk$set(echo = TRUE)
     
     - [Tutorial 2 de interpolación](Unidad-2/Tutorial-splines-IDW.html)
     
-3. Modelado de áreas de distribución y nichos ecológicos
+3. Modelado de nichos ecológicos y áreas de distribución
 
     - [Introducción](Unidad-4/Introduccion-nichos.pdf)
 
@@ -49,4 +49,6 @@ knitr::opts_chunk$set(echo = TRUE)
         - [Representación espacial](Unidad-4/Rep-esp-HeV.html)
     
     - [Caso correlativo](Unidad-4/Caso-correlativo.pdf)
+    
+        - [Tutorial spatstat](Tutorial-SDM/Tut-1.R)
     
