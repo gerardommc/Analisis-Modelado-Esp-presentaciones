@@ -1,6 +1,6 @@
 library(terra)
 
-v <-  vect("Tutorial-SDM/Cuadricula-brad.gpkg")
+v <-  vect("Cuadricula-brad.gpkg")
 
 byn <- rep(c(1, 0), 14)
 byn1 <-  rep(c(0, 1), 14)
