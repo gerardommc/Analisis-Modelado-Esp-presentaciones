@@ -177,10 +177,10 @@ Al igual que en correlación, debemos:
 Retomaremos el ejemplo de la correlación espacial:
 
 ```{r echo = F, warning=F, message=F}
-library(raster)
-r <- raster("../Datos-ejemplos/Var-1.tif") 
+library(terra)
+r <- rast("../Datos-ejemplos/Var-1.tif") 
 #Para varias capas alineadas
-r <- stack(list.files("../Datos-ejemplos/", 
+r <- rast(list.files("../Datos-ejemplos/", 
                       "tif", full.names = T))
 
 set.seed(19873)

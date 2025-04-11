@@ -1,0 +1,804 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="GDAL 3.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ogr="http://osgeo.org/gdal" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata><bounds minlat="25.527425054926400" minlon="-104.445884475949995" maxlat="29.699033207399800" maxlon="-100.017356842756001"/></metadata>              
+<wpt lat="25.7370033670217" lon="-101.599542026408002">
+  <extensions>
+    <ogr:field_1>1</ogr:field_1>
+    <ogr:Longitud>-101.599542026408002</ogr:Longitud>
+    <ogr:Latitud>25.7370033670217</ogr:Latitud>
+    <ogr:Mediciones>17.884365570744698</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="29.388042438821898" lon="-103.943670699489005">
+  <extensions>
+    <ogr:field_1>2</ogr:field_1>
+    <ogr:Longitud>-103.943670699489005</ogr:Longitud>
+    <ogr:Latitud>29.388042438821898</ogr:Latitud>
+    <ogr:Mediciones>18.404176030657901</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.661436025006701" lon="-104.076928020221999">
+  <extensions>
+    <ogr:field_1>3</ogr:field_1>
+    <ogr:Longitud>-104.076928020221999</ogr:Longitud>
+    <ogr:Latitud>27.661436025006701</ogr:Latitud>
+    <ogr:Mediciones>18.5420833369657</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="26.630491077247999" lon="-104.382890958454993">
+  <extensions>
+    <ogr:field_1>4</ogr:field_1>
+    <ogr:Longitud>-104.382890958454993</ogr:Longitud>
+    <ogr:Latitud>26.630491077247999</ogr:Latitud>
+    <ogr:Mediciones>18.419362531088701</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.889055422414099" lon="-102.653307295985996">
+  <extensions>
+    <ogr:field_1>5</ogr:field_1>
+    <ogr:Longitud>-102.653307295985996</ogr:Longitud>
+    <ogr:Latitud>27.889055422414099</ogr:Latitud>
+    <ogr:Mediciones>18.474536898207401</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="28.206838205968999" lon="-104.006745918537007">
+  <extensions>
+    <ogr:field_1>6</ogr:field_1>
+    <ogr:Longitud>-104.006745918537007</ogr:Longitud>
+    <ogr:Latitud>28.206838205968999</ogr:Latitud>
+    <ogr:Mediciones>18.327021673813501</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.122512338124199" lon="-102.702977825537999">
+  <extensions>
+    <ogr:field_1>7</ogr:field_1>
+    <ogr:Longitud>-102.702977825537999</ogr:Longitud>
+    <ogr:Latitud>27.122512338124199</ogr:Latitud>
+    <ogr:Mediciones>18.3382823564828</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="25.753051285352601" lon="-102.828620557091">
+  <extensions>
+    <ogr:field_1>8</ogr:field_1>
+    <ogr:Longitud>-102.828620557091</ogr:Longitud>
+    <ogr:Latitud>25.753051285352601</ogr:Latitud>
+    <ogr:Mediciones>17.934338538583599</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.254208095977098" lon="-100.227645907202003">
+  <extensions>
+    <ogr:field_1>9</ogr:field_1>
+    <ogr:Longitud>-100.227645907202003</ogr:Longitud>
+    <ogr:Latitud>27.254208095977098</ogr:Latitud>
+    <ogr:Mediciones>17.991695070014099</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="28.989461740013201" lon="-102.768710643285999">
+  <extensions>
+    <ogr:field_1>10</ogr:field_1>
+    <ogr:Longitud>-102.768710643285999</ogr:Longitud>
+    <ogr:Latitud>28.989461740013201</ogr:Latitud>
+    <ogr:Mediciones>18.237239412274199</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="29.3614136904012" lon="-103.574066753265996">
+  <extensions>
+    <ogr:field_1>11</ogr:field_1>
+    <ogr:Longitud>-103.574066753265996</ogr:Longitud>
+    <ogr:Latitud>29.3614136904012</ogr:Latitud>
+    <ogr:Mediciones>18.445850876004801</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="26.973667567083599" lon="-102.306487865630004">
+  <extensions>
+    <ogr:field_1>12</ogr:field_1>
+    <ogr:Longitud>-102.306487865630004</ogr:Longitud>
+    <ogr:Latitud>26.973667567083599</ogr:Latitud>
+    <ogr:Mediciones>18.0989099633099</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="25.845987728191499" lon="-100.919380565058006">
+  <extensions>
+    <ogr:field_1>13</ogr:field_1>
+    <ogr:Longitud>-100.919380565058006</ogr:Longitud>
+    <ogr:Latitud>25.845987728191499</ogr:Latitud>
+    <ogr:Mediciones>18.109258197370799</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="29.461912144627401" lon="-103.284852055133996">
+  <extensions>
+    <ogr:field_1>14</ogr:field_1>
+    <ogr:Longitud>-103.284852055133996</ogr:Longitud>
+    <ogr:Latitud>29.461912144627401</ogr:Latitud>
+    <ogr:Mediciones>18.565827654117601</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="26.951112761674398" lon="-100.483729769940993">
+  <extensions>
+    <ogr:field_1>15</ogr:field_1>
+    <ogr:Longitud>-100.483729769940993</ogr:Longitud>
+    <ogr:Latitud>26.951112761674398</ogr:Latitud>
+    <ogr:Mediciones>18.080904270249199</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.272408904740601" lon="-101.273872936261">
+  <extensions>
+    <ogr:field_1>16</ogr:field_1>
+    <ogr:Longitud>-101.273872936261</ogr:Longitud>
+    <ogr:Latitud>27.272408904740601</ogr:Latitud>
+    <ogr:Mediciones>18.0816748203579</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="25.5274250549264" lon="-100.854782356298998">
+  <extensions>
+    <ogr:field_1>17</ogr:field_1>
+    <ogr:Longitud>-100.854782356298998</ogr:Longitud>
+    <ogr:Latitud>25.5274250549264</ogr:Latitud>
+    <ogr:Mediciones>18.1301988776675</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.729648187989401" lon="-104.076037466060001">
+  <extensions>
+    <ogr:field_1>18</ogr:field_1>
+    <ogr:Longitud>-104.076037466060001</ogr:Longitud>
+    <ogr:Latitud>27.729648187989401</ogr:Latitud>
+    <ogr:Mediciones>18.730221920459201</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="29.2532521247864" lon="-101.497275151894002">
+  <extensions>
+    <ogr:field_1>19</ogr:field_1>
+    <ogr:Longitud>-101.497275151894002</ogr:Longitud>
+    <ogr:Latitud>29.2532521247864</ogr:Latitud>
+    <ogr:Mediciones>18.274898253562</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="28.6470336264465" lon="-102.358279385488004">
+  <extensions>
+    <ogr:field_1>20</ogr:field_1>
+    <ogr:Longitud>-102.358279385488004</ogr:Longitud>
+    <ogr:Latitud>28.6470336264465</ogr:Latitud>
+    <ogr:Mediciones>18.178033562133098</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="28.437682289164499" lon="-104.241646325215996">
+  <extensions>
+    <ogr:field_1>21</ogr:field_1>
+    <ogr:Longitud>-104.241646325215996</ogr:Longitud>
+    <ogr:Latitud>28.437682289164499</ogr:Latitud>
+    <ogr:Mediciones>18.612544525150199</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="29.321745292888998" lon="-102.610584056587001">
+  <extensions>
+    <ogr:field_1>22</ogr:field_1>
+    <ogr:Longitud>-102.610584056587001</ogr:Longitud>
+    <ogr:Latitud>29.321745292888998</ogr:Latitud>
+    <ogr:Mediciones>18.470259506315799</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="29.403014862444302" lon="-101.365286912070999">
+  <extensions>
+    <ogr:field_1>23</ogr:field_1>
+    <ogr:Longitud>-101.365286912070999</ogr:Longitud>
+    <ogr:Latitud>29.403014862444302</ogr:Latitud>
+    <ogr:Mediciones>18.4490430297326</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="28.801090850355099" lon="-101.615064391168005">
+  <extensions>
+    <ogr:field_1>24</ogr:field_1>
+    <ogr:Longitud>-101.615064391168005</ogr:Longitud>
+    <ogr:Latitud>28.801090850355099</ogr:Latitud>
+    <ogr:Mediciones>18.249407151309299</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="26.726080780522899" lon="-104.186272567486995">
+  <extensions>
+    <ogr:field_1>25</ogr:field_1>
+    <ogr:Longitud>-104.186272567486995</ogr:Longitud>
+    <ogr:Latitud>26.726080780522899</ogr:Latitud>
+    <ogr:Mediciones>18.251008884007199</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.130805116938401" lon="-103.566071175155002">
+  <extensions>
+    <ogr:field_1>26</ogr:field_1>
+    <ogr:Longitud>-103.566071175155002</ogr:Longitud>
+    <ogr:Latitud>27.130805116938401</ogr:Latitud>
+    <ogr:Mediciones>18.271909576604099</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.2968772261403" lon="-103.536156364948994">
+  <extensions>
+    <ogr:field_1>27</ogr:field_1>
+    <ogr:Longitud>-103.536156364948994</ogr:Longitud>
+    <ogr:Latitud>27.2968772261403</ogr:Latitud>
+    <ogr:Mediciones>18.462372665320899</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="26.8332333126571" lon="-101.462030754656993">
+  <extensions>
+    <ogr:field_1>28</ogr:field_1>
+    <ogr:Longitud>-101.462030754656993</ogr:Longitud>
+    <ogr:Latitud>26.8332333126571</ogr:Latitud>
+    <ogr:Mediciones>17.930724688024601</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.079637415194899" lon="-100.800255019915994">
+  <extensions>
+    <ogr:field_1>29</ogr:field_1>
+    <ogr:Longitud>-100.800255019915994</ogr:Longitud>
+    <ogr:Latitud>27.079637415194899</ogr:Latitud>
+    <ogr:Mediciones>17.885586139406801</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="26.9574571480975" lon="-101.353974193683996">
+  <extensions>
+    <ogr:field_1>30</ogr:field_1>
+    <ogr:Longitud>-101.353974193683996</ogr:Longitud>
+    <ogr:Latitud>26.9574571480975</ogr:Latitud>
+    <ogr:Mediciones>17.880670346809499</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="28.982866692356801" lon="-103.526358928066003">
+  <extensions>
+    <ogr:field_1>31</ogr:field_1>
+    <ogr:Longitud>-103.526358928066003</ogr:Longitud>
+    <ogr:Latitud>28.982866692356801</ogr:Latitud>
+    <ogr:Mediciones>18.3327480188956</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="29.6990332073998" lon="-101.625820151995995">
+  <extensions>
+    <ogr:field_1>32</ogr:field_1>
+    <ogr:Longitud>-101.625820151995995</ogr:Longitud>
+    <ogr:Latitud>29.6990332073998</ogr:Latitud>
+    <ogr:Mediciones>18.431005068131</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="29.259377461206199" lon="-100.746174290194006">
+  <extensions>
+    <ogr:field_1>33</ogr:field_1>
+    <ogr:Longitud>-100.746174290194006</ogr:Longitud>
+    <ogr:Latitud>29.259377461206199</ogr:Latitud>
+    <ogr:Mediciones>18.2529715935949</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.783043160336099" lon="-103.009169643163006">
+  <extensions>
+    <ogr:field_1>34</ogr:field_1>
+    <ogr:Longitud>-103.009169643163006</ogr:Longitud>
+    <ogr:Latitud>27.783043160336099</ogr:Latitud>
+    <ogr:Mediciones>18.082982273172799</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="26.930436226213398" lon="-103.941681603668002">
+  <extensions>
+    <ogr:field_1>35</ogr:field_1>
+    <ogr:Longitud>-103.941681603668002</ogr:Longitud>
+    <ogr:Latitud>26.930436226213398</ogr:Latitud>
+    <ogr:Mediciones>18.0836107188331</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="25.836849941080398" lon="-103.854669946944">
+  <extensions>
+    <ogr:field_1>36</ogr:field_1>
+    <ogr:Longitud>-103.854669946944</ogr:Longitud>
+    <ogr:Latitud>25.836849941080398</ogr:Latitud>
+    <ogr:Mediciones>18.067102890275599</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="28.6124480577651" lon="-101.984232379938007">
+  <extensions>
+    <ogr:field_1>37</ogr:field_1>
+    <ogr:Longitud>-101.984232379938007</ogr:Longitud>
+    <ogr:Latitud>28.6124480577651</ogr:Latitud>
+    <ogr:Mediciones>18.296305879800901</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="26.285839280951802" lon="-101.007081964402005">
+  <extensions>
+    <ogr:field_1>38</ogr:field_1>
+    <ogr:Longitud>-101.007081964402005</ogr:Longitud>
+    <ogr:Latitud>26.285839280951802</ogr:Latitud>
+    <ogr:Mediciones>18.308182459561099</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="28.436236672382801" lon="-102.866336845676003">
+  <extensions>
+    <ogr:field_1>39</ogr:field_1>
+    <ogr:Longitud>-102.866336845676003</ogr:Longitud>
+    <ogr:Latitud>28.436236672382801</ogr:Latitud>
+    <ogr:Mediciones>18.068321843275001</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="28.677552228374399" lon="-104.296921365079001">
+  <extensions>
+    <ogr:field_1>40</ogr:field_1>
+    <ogr:Longitud>-104.296921365079001</ogr:Longitud>
+    <ogr:Latitud>28.677552228374399</ogr:Latitud>
+    <ogr:Mediciones>18.600497200170398</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.0529629455879" lon="-100.214926738990002">
+  <extensions>
+    <ogr:field_1>41</ogr:field_1>
+    <ogr:Longitud>-100.214926738990002</ogr:Longitud>
+    <ogr:Latitud>27.0529629455879</ogr:Latitud>
+    <ogr:Mediciones>17.952072906201401</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.092130623990698" lon="-103.092296268907006">
+  <extensions>
+    <ogr:field_1>42</ogr:field_1>
+    <ogr:Longitud>-103.092296268907006</ogr:Longitud>
+    <ogr:Latitud>27.092130623990698</ogr:Latitud>
+    <ogr:Mediciones>18.0807736483765</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="28.040615479415301" lon="-101.500296495854997">
+  <extensions>
+    <ogr:field_1>43</ogr:field_1>
+    <ogr:Longitud>-101.500296495854997</ogr:Longitud>
+    <ogr:Latitud>28.040615479415301</ogr:Latitud>
+    <ogr:Mediciones>18.1748438368117</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.575253061484499" lon="-103.882060876">
+  <extensions>
+    <ogr:field_1>44</ogr:field_1>
+    <ogr:Longitud>-103.882060876</ogr:Longitud>
+    <ogr:Latitud>27.575253061484499</ogr:Latitud>
+    <ogr:Mediciones>18.104537898107701</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="29.393135556997699" lon="-103.443467073142997">
+  <extensions>
+    <ogr:field_1>45</ogr:field_1>
+    <ogr:Longitud>-103.443467073142997</ogr:Longitud>
+    <ogr:Latitud>29.393135556997699</ogr:Latitud>
+    <ogr:Mediciones>18.484159382848201</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.155147130321701" lon="-102.998065400518996">
+  <extensions>
+    <ogr:field_1>46</ogr:field_1>
+    <ogr:Longitud>-102.998065400518996</ogr:Longitud>
+    <ogr:Latitud>27.155147130321701</ogr:Latitud>
+    <ogr:Mediciones>18.193063148664599</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="25.801003263657901" lon="-104.326139064971002">
+  <extensions>
+    <ogr:field_1>47</ogr:field_1>
+    <ogr:Longitud>-104.326139064971002</ogr:Longitud>
+    <ogr:Latitud>25.801003263657901</ogr:Latitud>
+    <ogr:Mediciones>18.201882257087</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="29.282830225629699" lon="-101.841116700553997">
+  <extensions>
+    <ogr:field_1>48</ogr:field_1>
+    <ogr:Longitud>-101.841116700553997</ogr:Longitud>
+    <ogr:Latitud>29.282830225629699</ogr:Latitud>
+    <ogr:Mediciones>18.244306074520299</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.248097131587599" lon="-101.039892941131001">
+  <extensions>
+    <ogr:field_1>49</ogr:field_1>
+    <ogr:Longitud>-101.039892941131001</ogr:Longitud>
+    <ogr:Latitud>27.248097131587599</ogr:Latitud>
+    <ogr:Mediciones>17.796113947835</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="26.255059178871999" lon="-102.206051100045002">
+  <extensions>
+    <ogr:field_1>50</ogr:field_1>
+    <ogr:Longitud>-102.206051100045002</ogr:Longitud>
+    <ogr:Latitud>26.255059178871999</ogr:Latitud>
+    <ogr:Mediciones>18.132308097617301</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.117590740649" lon="-104.150564219336999">
+  <extensions>
+    <ogr:field_1>51</ogr:field_1>
+    <ogr:Longitud>-104.150564219336999</ogr:Longitud>
+    <ogr:Latitud>27.117590740649</ogr:Latitud>
+    <ogr:Mediciones>18.864717487149498</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="25.5895600865129" lon="-101.858257247251004">
+  <extensions>
+    <ogr:field_1>52</ogr:field_1>
+    <ogr:Longitud>-101.858257247251004</ogr:Longitud>
+    <ogr:Latitud>25.5895600865129</ogr:Latitud>
+    <ogr:Mediciones>17.9550444382282</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="25.754881548788401" lon="-104.292308076634001">
+  <extensions>
+    <ogr:field_1>53</ogr:field_1>
+    <ogr:Longitud>-104.292308076634001</ogr:Longitud>
+    <ogr:Latitud>25.754881548788401</ogr:Latitud>
+    <ogr:Mediciones>18.053449087813402</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="25.619225388625601" lon="-102.471237654098999">
+  <extensions>
+    <ogr:field_1>54</ogr:field_1>
+    <ogr:Longitud>-102.471237654098999</ogr:Longitud>
+    <ogr:Latitud>25.619225388625601</ogr:Latitud>
+    <ogr:Mediciones>17.830302633313799</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.464436834119301" lon="-100.025254223728993">
+  <extensions>
+    <ogr:field_1>55</ogr:field_1>
+    <ogr:Longitud>-100.025254223728993</ogr:Longitud>
+    <ogr:Latitud>27.464436834119301</ogr:Latitud>
+    <ogr:Mediciones>18.122599944808702</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="28.5003663240932" lon="-100.017356842756001">
+  <extensions>
+    <ogr:field_1>56</ogr:field_1>
+    <ogr:Longitud>-100.017356842756001</ogr:Longitud>
+    <ogr:Latitud>28.5003663240932</ogr:Latitud>
+    <ogr:Mediciones>18.050951660949501</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="26.0997830284294" lon="-103.696024898671993">
+  <extensions>
+    <ogr:field_1>57</ogr:field_1>
+    <ogr:Longitud>-103.696024898671993</ogr:Longitud>
+    <ogr:Latitud>26.0997830284294</ogr:Latitud>
+    <ogr:Mediciones>17.854111979190201</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.205762615380799" lon="-102.160131538170006">
+  <extensions>
+    <ogr:field_1>58</ogr:field_1>
+    <ogr:Longitud>-102.160131538170006</ogr:Longitud>
+    <ogr:Latitud>27.205762615380799</ogr:Latitud>
+    <ogr:Mediciones>18.1000569959226</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="28.446143346978399" lon="-103.410841346951003">
+  <extensions>
+    <ogr:field_1>59</ogr:field_1>
+    <ogr:Longitud>-103.410841346951003</ogr:Longitud>
+    <ogr:Latitud>28.446143346978399</ogr:Latitud>
+    <ogr:Mediciones>18.575790354436801</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.6669147256762" lon="-104.309708544052995">
+  <extensions>
+    <ogr:field_1>60</ogr:field_1>
+    <ogr:Longitud>-104.309708544052995</ogr:Longitud>
+    <ogr:Latitud>27.6669147256762</ogr:Latitud>
+    <ogr:Mediciones>18.500802229420898</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="28.410835144948202" lon="-104.306148516131003">
+  <extensions>
+    <ogr:field_1>61</ogr:field_1>
+    <ogr:Longitud>-104.306148516131003</ogr:Longitud>
+    <ogr:Latitud>28.410835144948202</ogr:Latitud>
+    <ogr:Mediciones>18.833268595447699</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="26.329390099039301" lon="-104.165663794614005">
+  <extensions>
+    <ogr:field_1>62</ogr:field_1>
+    <ogr:Longitud>-104.165663794614005</ogr:Longitud>
+    <ogr:Latitud>26.329390099039301</ogr:Latitud>
+    <ogr:Mediciones>18.0373775141924</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.409733703872199" lon="-101.232359709451003">
+  <extensions>
+    <ogr:field_1>63</ogr:field_1>
+    <ogr:Longitud>-101.232359709451003</ogr:Longitud>
+    <ogr:Latitud>27.409733703872199</ogr:Latitud>
+    <ogr:Mediciones>18.008514651145301</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="26.901978958910298" lon="-104.401953713386007">
+  <extensions>
+    <ogr:field_1>64</ogr:field_1>
+    <ogr:Longitud>-104.401953713386007</ogr:Longitud>
+    <ogr:Latitud>26.901978958910298</ogr:Latitud>
+    <ogr:Mediciones>18.408927392951799</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="28.494680573092801" lon="-103.415714102448007">
+  <extensions>
+    <ogr:field_1>65</ogr:field_1>
+    <ogr:Longitud>-103.415714102448007</ogr:Longitud>
+    <ogr:Latitud>28.494680573092801</ogr:Latitud>
+    <ogr:Mediciones>18.3700641061636</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="29.6349148395471" lon="-104.395118064946004">
+  <extensions>
+    <ogr:field_1>66</ogr:field_1>
+    <ogr:Longitud>-104.395118064946004</ogr:Longitud>
+    <ogr:Latitud>29.6349148395471</ogr:Latitud>
+    <ogr:Mediciones>18.313104630877099</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.502334914729001" lon="-102.253356074216001">
+  <extensions>
+    <ogr:field_1>67</ogr:field_1>
+    <ogr:Longitud>-102.253356074216001</ogr:Longitud>
+    <ogr:Latitud>27.502334914729001</ogr:Latitud>
+    <ogr:Mediciones>18.006334907130402</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.8965508522931" lon="-102.335692623862997">
+  <extensions>
+    <ogr:field_1>68</ogr:field_1>
+    <ogr:Longitud>-102.335692623862997</ogr:Longitud>
+    <ogr:Latitud>27.8965508522931</ogr:Latitud>
+    <ogr:Mediciones>18.494324471448799</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="28.325913487700699" lon="-101.052288701991003">
+  <extensions>
+    <ogr:field_1>69</ogr:field_1>
+    <ogr:Longitud>-101.052288701991003</ogr:Longitud>
+    <ogr:Latitud>28.325913487700699</ogr:Latitud>
+    <ogr:Mediciones>18.114224933670101</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="26.2482635525521" lon="-100.843742026715006">
+  <extensions>
+    <ogr:field_1>70</ogr:field_1>
+    <ogr:Longitud>-100.843742026715006</ogr:Longitud>
+    <ogr:Latitud>26.2482635525521</ogr:Latitud>
+    <ogr:Mediciones>17.950357227859001</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="29.6180947783403" lon="-102.820457817637006">
+  <extensions>
+    <ogr:field_1>71</ogr:field_1>
+    <ogr:Longitud>-102.820457817637006</ogr:Longitud>
+    <ogr:Latitud>29.6180947783403</ogr:Latitud>
+    <ogr:Mediciones>18.422405939450201</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.345674770139201" lon="-100.435471403528993">
+  <extensions>
+    <ogr:field_1>72</ogr:field_1>
+    <ogr:Longitud>-100.435471403528993</ogr:Longitud>
+    <ogr:Latitud>27.345674770139201</ogr:Latitud>
+    <ogr:Mediciones>18.2109258105131</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.035408846894299" lon="-100.873213592450995">
+  <extensions>
+    <ogr:field_1>73</ogr:field_1>
+    <ogr:Longitud>-100.873213592450995</ogr:Longitud>
+    <ogr:Latitud>27.035408846894299</ogr:Latitud>
+    <ogr:Mediciones>17.999898033302401</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="26.027930894773501" lon="-102.509697919361997">
+  <extensions>
+    <ogr:field_1>74</ogr:field_1>
+    <ogr:Longitud>-102.509697919361997</ogr:Longitud>
+    <ogr:Latitud>26.027930894773501</ogr:Latitud>
+    <ogr:Mediciones>17.8449879634369</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="28.175615967158201" lon="-100.720865262439006">
+  <extensions>
+    <ogr:field_1>75</ogr:field_1>
+    <ogr:Longitud>-100.720865262439006</ogr:Longitud>
+    <ogr:Latitud>28.175615967158201</ogr:Latitud>
+    <ogr:Mediciones>18.399803524078301</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="29.078621910139901" lon="-100.521143158548995">
+  <extensions>
+    <ogr:field_1>76</ogr:field_1>
+    <ogr:Longitud>-100.521143158548995</ogr:Longitud>
+    <ogr:Latitud>29.078621910139901</ogr:Latitud>
+    <ogr:Mediciones>18.148553004418002</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.0688323464245" lon="-100.943987121223003">
+  <extensions>
+    <ogr:field_1>77</ogr:field_1>
+    <ogr:Longitud>-100.943987121223003</ogr:Longitud>
+    <ogr:Latitud>27.0688323464245</ogr:Latitud>
+    <ogr:Mediciones>18.039875180717399</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="28.967647687252601" lon="-100.037529217078998">
+  <extensions>
+    <ogr:field_1>78</ogr:field_1>
+    <ogr:Longitud>-100.037529217078998</ogr:Longitud>
+    <ogr:Latitud>28.967647687252601</ogr:Latitud>
+    <ogr:Mediciones>18.383865478215199</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="25.730576619878399" lon="-102.783591383835002">
+  <extensions>
+    <ogr:field_1>79</ogr:field_1>
+    <ogr:Longitud>-102.783591383835002</ogr:Longitud>
+    <ogr:Latitud>25.730576619878399</ogr:Latitud>
+    <ogr:Mediciones>17.9592662062099</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="25.930152547499201" lon="-102.802340565481998">
+  <extensions>
+    <ogr:field_1>80</ogr:field_1>
+    <ogr:Longitud>-102.802340565481998</ogr:Longitud>
+    <ogr:Latitud>25.930152547499201</ogr:Latitud>
+    <ogr:Mediciones>17.780685713609099</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.525144573580501" lon="-101.807354298186993">
+  <extensions>
+    <ogr:field_1>81</ogr:field_1>
+    <ogr:Longitud>-101.807354298186993</ogr:Longitud>
+    <ogr:Latitud>27.525144573580501</ogr:Latitud>
+    <ogr:Mediciones>18.003976459719901</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="29.432092871004699" lon="-100.808077896246999">
+  <extensions>
+    <ogr:field_1>82</ogr:field_1>
+    <ogr:Longitud>-100.808077896246999</ogr:Longitud>
+    <ogr:Latitud>29.432092871004699</ogr:Latitud>
+    <ogr:Mediciones>18.135331045331601</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="28.624547778815" lon="-104.056632983032998">
+  <extensions>
+    <ogr:field_1>83</ogr:field_1>
+    <ogr:Longitud>-104.056632983032998</ogr:Longitud>
+    <ogr:Latitud>28.624547778815</ogr:Latitud>
+    <ogr:Mediciones>18.464411495991701</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="26.308808924350899" lon="-104.158516253461002">
+  <extensions>
+    <ogr:field_1>84</ogr:field_1>
+    <ogr:Longitud>-104.158516253461002</ogr:Longitud>
+    <ogr:Latitud>26.308808924350899</ogr:Latitud>
+    <ogr:Mediciones>17.9238017087869</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.361438544327399" lon="-101.949290708755001">
+  <extensions>
+    <ogr:field_1>85</ogr:field_1>
+    <ogr:Longitud>-101.949290708755001</ogr:Longitud>
+    <ogr:Latitud>27.361438544327399</ogr:Latitud>
+    <ogr:Mediciones>17.929922398068701</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="29.5234956900123" lon="-100.873615141143006">
+  <extensions>
+    <ogr:field_1>86</ogr:field_1>
+    <ogr:Longitud>-100.873615141143006</ogr:Longitud>
+    <ogr:Latitud>29.5234956900123</ogr:Latitud>
+    <ogr:Mediciones>18.1060081802399</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.279631580924601" lon="-101.508182846243002">
+  <extensions>
+    <ogr:field_1>87</ogr:field_1>
+    <ogr:Longitud>-101.508182846243002</ogr:Longitud>
+    <ogr:Latitud>27.279631580924601</ogr:Latitud>
+    <ogr:Mediciones>17.609051561107702</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="29.559002101281699" lon="-104.445884475949995">
+  <extensions>
+    <ogr:field_1>88</ogr:field_1>
+    <ogr:Longitud>-104.445884475949995</ogr:Longitud>
+    <ogr:Latitud>29.559002101281699</ogr:Latitud>
+    <ogr:Mediciones>18.360644807037801</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="28.0006792489439" lon="-102.303103702607999">
+  <extensions>
+    <ogr:field_1>89</ogr:field_1>
+    <ogr:Longitud>-102.303103702607999</ogr:Longitud>
+    <ogr:Latitud>28.0006792489439</ogr:Latitud>
+    <ogr:Mediciones>18.347752543574298</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.492906329920501" lon="-101.37777625164">
+  <extensions>
+    <ogr:field_1>90</ogr:field_1>
+    <ogr:Longitud>-101.37777625164</ogr:Longitud>
+    <ogr:Latitud>27.492906329920501</ogr:Latitud>
+    <ogr:Mediciones>17.839771222388102</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="26.508156752586402" lon="-101.301291206037007">
+  <extensions>
+    <ogr:field_1>91</ogr:field_1>
+    <ogr:Longitud>-101.301291206037007</ogr:Longitud>
+    <ogr:Latitud>26.508156752586402</ogr:Latitud>
+    <ogr:Mediciones>18.453159849626001</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="28.031722792284601" lon="-100.459620431415004">
+  <extensions>
+    <ogr:field_1>92</ogr:field_1>
+    <ogr:Longitud>-100.459620431415004</ogr:Longitud>
+    <ogr:Latitud>28.031722792284601</ogr:Latitud>
+    <ogr:Mediciones>17.939277351222199</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="26.690041998820401" lon="-101.083037431934002">
+  <extensions>
+    <ogr:field_1>93</ogr:field_1>
+    <ogr:Longitud>-101.083037431934002</ogr:Longitud>
+    <ogr:Latitud>26.690041998820401</ogr:Latitud>
+    <ogr:Mediciones>18.268199364165799</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.505154496431398" lon="-103.983806565869997">
+  <extensions>
+    <ogr:field_1>94</ogr:field_1>
+    <ogr:Longitud>-103.983806565869997</ogr:Longitud>
+    <ogr:Latitud>27.505154496431398</ogr:Latitud>
+    <ogr:Mediciones>18.962228213449499</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="28.475670415721801" lon="-102.051135628832995">
+  <extensions>
+    <ogr:field_1>95</ogr:field_1>
+    <ogr:Longitud>-102.051135628832995</ogr:Longitud>
+    <ogr:Latitud>28.475670415721801</ogr:Latitud>
+    <ogr:Mediciones>18.469329801655299</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="29.3181069680024" lon="-104.156274271429993">
+  <extensions>
+    <ogr:field_1>96</ogr:field_1>
+    <ogr:Longitud>-104.156274271429993</ogr:Longitud>
+    <ogr:Latitud>29.3181069680024</ogr:Latitud>
+    <ogr:Mediciones>18.492956761178998</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="27.840794658148699" lon="-103.425614251173002">
+  <extensions>
+    <ogr:field_1>97</ogr:field_1>
+    <ogr:Longitud>-103.425614251173002</ogr:Longitud>
+    <ogr:Latitud>27.840794658148699</ogr:Latitud>
+    <ogr:Mediciones>18.5471826667176</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="28.771659160964202" lon="-102.345325553324002">
+  <extensions>
+    <ogr:field_1>98</ogr:field_1>
+    <ogr:Longitud>-102.345325553324002</ogr:Longitud>
+    <ogr:Latitud>28.771659160964202</ogr:Latitud>
+    <ogr:Mediciones>18.156246847128699</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="29.061088407738101" lon="-103.830158156576005">
+  <extensions>
+    <ogr:field_1>99</ogr:field_1>
+    <ogr:Longitud>-103.830158156576005</ogr:Longitud>
+    <ogr:Latitud>29.061088407738101</ogr:Latitud>
+    <ogr:Mediciones>18.4802950577416</ogr:Mediciones>
+  </extensions>
+</wpt>
+<wpt lat="26.2845161026809" lon="-100.647872574510998">
+  <extensions>
+    <ogr:field_1>100</ogr:field_1>
+    <ogr:Longitud>-100.647872574510998</ogr:Longitud>
+    <ogr:Latitud>26.2845161026809</ogr:Latitud>
+    <ogr:Mediciones>17.793964872850601</ogr:Mediciones>
+  </extensions>
+</wpt>
+</gpx>
